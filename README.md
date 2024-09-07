@@ -61,6 +61,26 @@ C.4 PORT - Port addresses, or port numbers, are 16-bit unsigned integers that ar
    ![Image 8](https://github.com/user-attachments/assets/dc6389bf-870c-4d4b-b4c5-10cc007d2443)
 
 
+4. OS - OPERATING SYSTEM is an Operating system is system software that manages computer hardware and software resources and provides common services for computer programs. it act as an intermediary between users and computer hardware
+
+these are the famous or commonly used - windows , macos , linux
+
+![1_RwHwEEHdrNitm0a_EQNycA](https://github.com/user-attachments/assets/0b85a7f0-ab02-442d-a8a4-0cdb9d9597c0)
+
+
+5. KERNEL - The kernel is a core component of an operating system and serves as the main interface between the computer's physical hardware and the processes running on it.
+
+6. BARE METAL - Bare metal refers to a computer system or servers that runs without a layer of abstraction such as a virtulization layer or operating system. in this context, "bare metal" means the hardware is directly utilized for a single application or workload, allowing for maximum performance and control.
+
+7. CLOUD COMPUTING - Cloud computing is the delivery of computing resources over the internet, or "the cloud", on-demand and without requiring direct management by the user.
+    TYPES- a. PRIVATE - like openstack  b.PUBLIC - it has 3 which are - AWS(AMAZON WEB SERVICE) , GCP(GOOGLE CLOUD PLATFORM) , AZURE(MICROSOFT)
+
+8. VM - A virtual machine (VM) is a software-based computer that acts like a physical computer, but uses virtual resources instead of physical components. VMs can perform many of the same functions as a physical computer, such as running programs and operating systems, storing data, and connecting to networks. 
+![4ea83991-2034-4278-b40c-35a22f18310a](https://github.com/user-attachments/assets/215ef27e-5bc5-4c9a-add3-9dc27f25aadf)
+
+
+
+
    
 
    
