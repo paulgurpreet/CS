@@ -90,7 +90,19 @@ these are the famous or commonly used - windows , macos , linux
 
 11. KUBERNETES - Kubernetes is open-source software that helps deploy, manage, and scale containerized applications and also called k8s.
 
-12. API - 
+12. API - Application Programming Interface allow developers to sync data between multiple platforms and can facilitate communication among the various microservices in web applications.OR An API (Application Programming Interface) is a bridge between the front end and back end of an application. While backend developers usually create APIs, front end developers need to know how to use them.
+
+13. FRONTEND - HTML , CSS , JAVASCRIPT
+
+14. BACKEND - FRAMEWORK LIKE PYTHON(django)
+    ![1342eedf-3c5e-4b5a-8be8-ec7e38b3ba3e](https://github.com/user-attachments/assets/6154e95a-76e0-4a20-8758-88d74d211732)
+
+
+15. BINARY NO. - IS IN 0'S AND 1'S AND USED AS \(2^{n}\)
+    ![places-b](https://github.com/user-attachments/assets/c4c457ce-d1c7-43a8-83f2-4846e05a89b9)
+
+    
+
 
 
 
