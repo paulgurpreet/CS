@@ -78,6 +78,15 @@ these are the famous or commonly used - windows , macos , linux
 8. VM - A virtual machine (VM) is a software-based computer that acts like a physical computer, but uses virtual resources instead of physical components. VMs can perform many of the same functions as a physical computer, such as running programs and operating systems, storing data, and connecting to networks. 
 ![4ea83991-2034-4278-b40c-35a22f18310a](https://github.com/user-attachments/assets/215ef27e-5bc5-4c9a-add3-9dc27f25aadf)
 
+9. ALGORITHM - An algorithm is a set of instructions that a computer follows to perform calculations or solve problems. Algorithms are finite sets of instructions that are carried out in a specific order.
+![f550f5f5-eefb-405f-8bb9-c1c1cd005701](https://github.com/user-attachments/assets/11f37d8e-19cb-44cb-a622-8f891793ad1a)
+
+10. IPv6 - Internet Protocol version 6 (IPv6) is the latest version of the Internet Protocol (IP) and is the successor to IPv4. IPv6 is important because it's intended to address the problem of IPv4 address exhaustion and to support the growing demand for internet connectivity.
+
+11. KUBERNETES - Kubernetes is open-source software that helps deploy, manage, and scale containerized applications and also called k8s.
+
+12. API - 
+
 
 
 
