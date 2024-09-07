@@ -4,6 +4,8 @@ AND is defined as 'A computer is an electronic device that takes in raw data fro
 1. COMPUTER is  mainly divided into three parts- A. Computation B.Storage C. Network
 
 A. COMPUTATION:-
+
+
    ![photo_6237620436531789178_x](https://github.com/user-attachments/assets/9622fc3e-89f1-446b-a577-cca563291718)
 
 
