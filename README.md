@@ -34,9 +34,9 @@ A.9 RISC - Reduced Instruction Set Computer is a microprocessor that uses a smal
  A.11 SOC - A system on a chip (SoC) is an integrated circuit that contains most or all of a computer or other electronic system's components on a single chip.
 
 B. MEMORY AND STORAGE -  the electronic components that store data and instructions for a computer to access quickly. It is used to store information that the computer's processor needs to run applications and open files.Memory is what your computer uses to store data temporarily, while storage is where you save files permanently.
-                                                        TYPES OF IT -
-   B.1 PRIMARY - Also known as main memory, this is the computer's main memory that stores data, programs, and instructions that are currently in use.Like RAM
-   B.2 SECONDARY - This type of memory provides permanent storage for data that doesn't erase when the computer is turned off. It's often used for backing up data, disaster recovery, and storing critical data for long periods of time.Like HARDDISK
+TYPES-
+B.1 PRIMARY - Also known as main memory, this is the computer's main memory that stores data, programs, and instructions that are currently in use.Like RAM
+B.2 SECONDARY - This type of memory provides permanent storage for data that doesn't erase when the computer is turned off. It's often used for backing up data, disaster recovery, and storing critical data for long periods of time.Like HARDDISK
    ![computer-memory-hierarchy](https://github.com/user-attachments/assets/04bc6fa4-c22d-48ac-9a62-9f944aac844c)
 
 C. NETWORK - A computer network is a group of devices that exchange data and resources with each other. Networks can be connected using cables or wireless media.
