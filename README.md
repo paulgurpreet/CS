@@ -98,8 +98,21 @@ these are the famous or commonly used - windows , macos , linux
     ![1342eedf-3c5e-4b5a-8be8-ec7e38b3ba3e](https://github.com/user-attachments/assets/6154e95a-76e0-4a20-8758-88d74d211732)
 
 
-15. BINARY NO. - IS IN 0'S AND 1'S AND USED AS \(2^{n}\)
+15. BINARY NO. - IS IN 0'S AND 1'S AND CAN BE DETERMINED AS 2^N
+    
     ![places-b](https://github.com/user-attachments/assets/c4c457ce-d1c7-43a8-83f2-4846e05a89b9)
+
+16. SIZE IN 2^N -
+a. 2^10 = 1kb
+
+b. 2^20 = 1mb
+
+c. 2^30 = 1gb
+
+and IPV6 IS 2^128
+
+IP ADDRESS IS OF 32 bits OR 4 bytes - LIKE 192.168.X.Y each no. takes 8 bits like in this case it has 4 numbers written in form of a.b.x.y and this 8bit(one no.) called OCTET.
+
 
     
 
