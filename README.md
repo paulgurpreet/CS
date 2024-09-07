@@ -40,6 +40,7 @@ B. MEMORY AND STORAGE -  the electronic components that store data and instructi
 TYPES-
 
 B.1 PRIMARY - Also known as main memory, this is the computer's main memory that stores data, programs, and instructions that are currently in use.Like RAM
+
 B.2 SECONDARY - This type of memory provides permanent storage for data that doesn't erase when the computer is turned off. It's often used for backing up data, disaster recovery, and storing critical data for long periods of time.Like HARDDISK
    ![computer-memory-hierarchy](https://github.com/user-attachments/assets/04bc6fa4-c22d-48ac-9a62-9f944aac844c)
 
