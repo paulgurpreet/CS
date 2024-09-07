@@ -13,31 +13,40 @@ A.1 CPU - Central processing unit is the primary component of a computer that ac
 
 A.2 DPU - A data processing unit is  a specialized processor that helps the central processing unit (CPU) with tasks like networking, security, and storage.
     DPUs are sometimes called "IPUs" (for "infrastructure processing unit") or "SmartNICs". Leading providers of DPUs include NVIDIA, Intel, and AMD.
-    
-A.3 APU - Accelerated Processing Unit is a processor that combines a CPU (Central Processing Unit) and a GPU (Graphics Processing Unit) into one chip.
 
-A.4 NPU - A neural processing unit is a specialized processor that accelerates artificial intelligence (AI) and machine learning (ML) applications.
+A.3 GPU - A graphics processing unit (GPU) is an electronic circuit that can perform mathematical calculations at high speed. Computing tasks like graphics rendering, machine learning (ML), and video editing require the application of similar mathematical operations on a large dataset.
+       
+A.4 APU - Accelerated Processing Unit is a processor that combines a CPU (Central Processing Unit) and a GPU (Graphics Processing Unit) into one chip.
 
-A.5 TPU - Tensor Processing Unit is a custom-made application-specific integrated circuit (ASIC) developed by Google to speed up machine learning workloads. TPUs are designed for neural networks and are known for their high throughput and parallelism.
+A.5 NPU - A neural processing unit is a specialized processor that accelerates artificial intelligence (AI) and machine learning (ML) applications.
 
-A.6 FPGA - A field-programmable gate array (FPGA) is an integrated circuit that can be reconfigured after manufacturing to suit specific needs. FPGAs are often used in applications that require high data processing or transactions, such as financial trading, molecular dynamics, and bioscience.
+A.6 TPU - Tensor Processing Unit is a custom-made application-specific integrated circuit (ASIC) developed by Google to speed up machine learning workloads. TPUs are designed for neural networks and are known for their high throughput and parallelism.
+
+A.7 FPGA - A field-programmable gate array (FPGA) is an integrated circuit that can be reconfigured after manufacturing to suit specific needs. FPGAs are often used in applications that require high data processing or transactions, such as financial trading, molecular dynamics, and bioscience.
 
 ![9-17-2014-5-05-59-PM](https://github.com/user-attachments/assets/69231393-b9d1-45f3-b65e-032bdbddc9d9)
 
-A.7 ASIC - Application-Specific integrated circuit is a type of integrated circuit designed for a specific application or function, rather than general puerpose use. for example, an ASIC designed for cryptocurrency mining is specifically built to perform the hashing calculations required for mining.
+A.8 ASIC - Application-Specific integrated circuit is a type of integrated circuit designed for a specific application or function, rather than general puerpose use. for example, an ASIC designed for cryptocurrency mining is specifically built to perform the hashing calculations required for mining.
 
-A.8 CISC - A Complex Instruction Set Computer (CISC) processor is a type of computer architecture that uses a large set of instructions to perform complex tasks.(X-86 ARCHITECTURE)
+A.9 CISC - A Complex Instruction Set Computer (CISC) processor is a type of computer architecture that uses a large set of instructions to perform complex tasks.(X-86 ARCHITECTURE)
+
 
 ![Image 9](https://github.com/user-attachments/assets/5017e7d0-72fb-4b67-9842-a3bcbf97a96f)
 
-A.9 RISC - Reduced Instruction Set Computer is a microprocessor that uses a small set of simple instructions to perform tasks.(ARM ARCHITECTURE)
+
+A.10 RISC - Reduced Instruction Set Computer is a microprocessor that uses a small set of simple instructions to perform tasks.(ARM ARCHITECTURE)
+
+
 ![risc-vs-cisc](https://github.com/user-attachments/assets/63dd70b9-e7af-411c-9961-4dfacf54536d)
 
- A.10 RISC-V  - RISC-V is an open-source instruction set architecture (ISA) that's used to design custom processors for a variety of applications. It's based on the principles of reduced instruction set computers (RISC) and is pronounced "risk-five".
+
+
+ A.11 RISC-V  - RISC-V is an open-source instruction set architecture (ISA) that's used to design custom processors for a variety of applications. It's based on the principles of reduced instruction set computers (RISC) and is pronounced "risk-five".
  
  ![1688313322743](https://github.com/user-attachments/assets/827ca40e-3661-4fab-b15a-bef2ddb73807)
+ 
 
- A.11 SOC - A system on a chip (SoC) is an integrated circuit that contains most or all of a computer or other electronic system's components on a single chip.
+ A.12 SOC - A system on a chip (SoC) is an integrated circuit that contains most or all of a computer or other electronic system's components on a single chip.
 
 B. MEMORY AND STORAGE -  the electronic components that store data and instructions for a computer to access quickly. It is used to store information that the computer's processor needs to run applications and open files.Memory is what your computer uses to store data temporarily, while storage is where you save files permanently.
 
