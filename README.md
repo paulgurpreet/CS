@@ -59,17 +59,24 @@ B.2 SECONDARY - This type of memory provides permanent storage for data that doe
    ![computer-memory-hierarchy](https://github.com/user-attachments/assets/04bc6fa4-c22d-48ac-9a62-9f944aac844c)
 
 C. NETWORK - A computer network is a group of devices that exchange data and resources with each other. Networks can be connected using cables or wireless media.
+
 C.1 INTERNET -  a communications system that connects computers and computer networks all over the world.
+
 C.2 DNS - Domain Name System (DNS): A network of computers that converts web addresses into IP addresses.
-C.2 IP - An Internet Protocol (IP) address is the unique identifying number assigned to every device connected to the internet.
+
+C.3 IP - An Internet Protocol (IP) address is the unique identifying number assigned to every device connected to the internet.
+
    TYPES-
+   
    1. PRIVATE - LAN(INTRANET)
     PRIVATE HAS 3 TYPES - (1) 10.x.y.z
    (2) 172.x.y.z
    (3) 192.168.x.y
-   2. PUBLIC - WAN(INTERNET)
-C.3 MAC - A MAC (Media Access Control) address is a unique identifier for a device's network interface controller (NIC) that's used in network communications. It's also known as a hardware address, physical address, or burned-in address (BIA).
-C.4 PORT - Port addresses, or port numbers, are 16-bit unsigned integers that are appended to an IP address to direct internet traffic to a specific process or service.
+
+   3. PUBLIC - WAN(INTERNET)
+      
+C.4 MAC - A MAC (Media Access Control) address is a unique identifier for a device's network interface controller (NIC) that's used in network communications. It's also known as a hardware address, physical address, or burned-in address (BIA).
+C.5 PORT - Port addresses, or port numbers, are 16-bit unsigned integers that are appended to an IP address to direct internet traffic to a specific process or service.
 
 2. OSI - The OSI Model (Open Systems Interconnection Model) is a conceptual framework used to describe the functions of a networking system.
 
