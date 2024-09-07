@@ -16,4 +16,5 @@ Allows communication: The motherboard allows the components to communicate with 
 Connects peripherals: The motherboard provides connectors for other peripherals. 
  
 Installation platform: The motherboard provides expansion slots for installing other devices and interfaces.
+            ![Computer-motherboard-diagram](https://github.com/user-attachments/assets/0e2dcd89-b283-4dee-b0c8-00e88fdde499)
 
