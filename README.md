@@ -140,6 +140,25 @@ and IPV6 IS 2^128
 IP ADDRESS IS OF 32 bits OR 4 bytes - LIKE 192.168.X.Y each no. takes 8 bits like in this case it has 4 numbers written in form of a.b.x.y and this 8bit(one no.) called OCTET.
 
 
+17. DEVOPS - DevOps is a software development practice that combines the words "development" and "operations" to describe the process of integrating these two disciplines into a single, continuous process. DevOps can help organizations deliver applications and services faster by: 
+ 
+Breaking down silos
+DevOps unifies people, processes, and technology across traditionally siloed roles like development, IT operations, quality engineering, and security. 
+ 
+Enabling collaboration
+DevOps allows for coordination and collaboration between teams that have different priorities, tasks, and timelines. 
+ 
+Accelerating delivery
+DevOps can speed up the delivery of code to production by incorporating automated, prescheduled code tests as the application code is being written or updated. 
+
+Improving products
+DevOps can help organizations evolve and improve products at a faster pace.
+
+
+![image](https://github.com/user-attachments/assets/5ff6fd00-ee73-49b4-ab40-ee42b54117a0)
+
+
+
     
 
 
