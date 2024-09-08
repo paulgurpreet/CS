@@ -142,16 +142,17 @@ IP ADDRESS IS OF 32 bits OR 4 bytes - LIKE 192.168.X.Y each no. takes 8 bits lik
 
 17. DEVOPS - DevOps is a software development practice that combines the words "development" and "operations" to describe the process of integrating these two disciplines into a single, continuous process. DevOps can help organizations deliver applications and services faster by: 
  
-Breaking down silos
+
+Breaking down silos - 
 DevOps unifies people, processes, and technology across traditionally siloed roles like development, IT operations, quality engineering, and security. 
  
-Enabling collaboration
+Enabling collaboration - 
 DevOps allows for coordination and collaboration between teams that have different priorities, tasks, and timelines. 
  
-Accelerating delivery
+Accelerating delivery - 
 DevOps can speed up the delivery of code to production by incorporating automated, prescheduled code tests as the application code is being written or updated. 
 
-Improving products
+Improving products - 
 DevOps can help organizations evolve and improve products at a faster pace.
 
 
