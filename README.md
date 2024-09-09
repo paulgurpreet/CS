@@ -1,5 +1,4 @@
-COMPUTER - Common Operating Machine Purposely Used for Technological and Educational Research
-AND is defined as 'A computer is an electronic device that takes in raw data from the user and processes it. It can be programmed to automatically carry out sequences of logical or arithmetic operations'
+'
 
 1. COMPUTER is  mainly divided into three parts- A. Computation B.Storage C. Network
 
