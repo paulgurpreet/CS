@@ -158,6 +158,15 @@ DevOps can help organizations evolve and improve products at a faster pace.
 ![image](https://github.com/user-attachments/assets/5ff6fd00-ee73-49b4-ab40-ee42b54117a0)
 
 
+18. HYPERVISOR - A hypervisor is a software that you can use to run multiple virtual machines on a single physical machine.
+       It has 2 types -
+    * type-1 - A type 1 hypervisor acts like a lightweight operating system and runs directly on the host's hardware.
+   
+    * type-2 -  a type 2 hypervisor runs as a software layer on an operating system, like other computer programs.
+
+![image](https://miro.medium.com/v2/resize:fit:1400/0*uOG3TpWM2BlBYkbg)    
+
+
 
     
 
