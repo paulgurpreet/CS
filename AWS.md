@@ -20,9 +20,10 @@
 
 **then vi index.html this will open a notepad like and write html code there like -**
 
-**<html>
-        hi**
-**</html>**
+![Screenshot 2024-09-10 225017](https://github.com/user-attachments/assets/ae2e7ceb-b9e6-4f82-a7ff-80b2bc47861c)
+
+
+
 
 **then press ctrl+c then shift+colon then write wq and enter**
 
