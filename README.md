@@ -169,7 +169,7 @@ DevOps can help organizations evolve and improve products at a faster pace.
 19.AMBIGUITY - Ambiguity in computer science means the possibility of more than one answer or interpretation.
 ![IMAGE](https://helpfulprofessor.com/wp-content/uploads/2023/09/ambiguity-example-and-definition-1024x724.jpg)
 
-**IN 1990 NASA SAID SANSKRIT IS THE LEAST AMGUISE LANGUAGE FOR COMPUTERS**
+**IN 1990 NASA SAID SANSKRIT IS THE LEAST AMBIGUISE LANGUAGE FOR COMPUTERS**
 
 20. ## HOW PROGRAM WORKS
 
