@@ -164,7 +164,26 @@ DevOps can help organizations evolve and improve products at a faster pace.
    
     * type-2(hosted) -  a type 2 hypervisor runs as a software layer on an operating system, like other computer programs.ex- Xen , PROXMOX
 
-![image](https://miro.medium.com/v2/resize:fit:1400/0*uOG3TpWM2BlBYkbg)    
+![image](https://miro.medium.com/v2/resize:fit:1400/0*uOG3TpWM2BlBYkbg) 
+
+19.AMBIGUITY - Ambiguity in computer science means the possibility of more than one answer or interpretation.
+![IMAGE](https://helpfulprofessor.com/wp-content/uploads/2023/09/ambiguity-example-and-definition-1024x724.jpg)
+
+**IN 1990 NASA SAID SANSKRIT IS THE LEAST AMGUISE LANGUAGE FOR COMPUTERS**
+
+20. ## HOW PROGRAM WORKS
+
+**PROGRAM(CODE) GOES INTO COMPILER THEN IT GOES INTO ASSEMBLER THEN INTO LINKER THEN INTO LOADER THEN INTO MAIN MEMORY(RAM) THEN IT PROCESS**
+
+**PROGRAM->COMPILER->ASSEMBLER->LINKER->LOADER->MAIN MEMORY->PROCESS**
+
+
+
+
+
+
+21. **ABSTRACTION - abstraction is the process of simplifying code or a program by removing irrelevant or distracting details.** 
+#### ALWAYS REMEMBER ABSTRACTION COMES WITH COST
 
 
 
