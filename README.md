@@ -198,6 +198,37 @@ DevOps can help organizations evolve and improve products at a faster pace.
 ![image](https://miro.medium.com/v2/resize:fit:1400/0*05Cl58eW6ldeITMZ.jpg)
 
 
+23. # Data Structure
+
+![image](https://private-user-images.githubusercontent.com/179934335/366373615-409eb165-4014-4097-b82e-98d16d943f54.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjYwNzAyMDQsIm5iZiI6MTcyNjA2OTkwNCwicGF0aCI6Ii8xNzk5MzQzMzUvMzY2MzczNjE1LTQwOWViMTY1LTQwMTQtNDA5Ny1iODJlLTk4ZDE2ZDk0M2Y1NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxMVQxNTUxNDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hM2YwOTgyM2UyNTU5N2M1MjkyY2M4OGZmODlmMTU1YmEzOWQ1MWU3OGExNWI3NzhkYjQ2M2E4MmM5ZGViOTYwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ZfNiK605inUYBYUzmUQNnqYY65vdDnE1DS841RJRkeA)
+
+24. # OOPS - object-oriented programming system
+
+**C + OOPS=C++**
+
+**OOPS contain-- a.class b.object c.reference d.construction**
+
+## TYPES OF OOPS
+
+**Encapsulation - Encapsulation is a concept in object-oriented programming (OOP) that bundles data and methods together into a single unit. It can also refer to limiting direct access to some of that data.**
+
+**Abstraction - Abstraction is a key concept in Object-Oriented Programming (OOP) that hides the internal details of an application to simplify it for users.**
+
+**Polymorphism - Polymorphism is the ability to use a single symbol to represent different types, or to provide a single interface for different types of entities.**
+
+**Inheritance - Inheritance is a core concept in object-oriented programming (OOP) that allows a class to inherit properties and behaviors from another class. This process creates a hierarchy of classes that share attributes and methods.**
+
+**Object - In object-oriented programming (OOP), an object is a collection of data and code that's used to represent and manipulate data.**
+
+**Class - In object-oriented programming, a class is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods).**
+
+**Reference - In object-oriented programming (OOP), a reference is a pointer or variable that refers to an object in memory.**
+
+**Construction - a constructor (abbreviation: ctor) is a special type of function called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables.**
+
+![image](https://private-user-images.githubusercontent.com/179934335/366374217-0c7286ff-b387-4609-aa89-b1844165a090.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjYwNzAyMDQsIm5iZiI6MTcyNjA2OTkwNCwicGF0aCI6Ii8xNzk5MzQzMzUvMzY2Mzc0MjE3LTBjNzI4NmZmLWIzODctNDYwOS1hYTg5LWIxODQ0MTY1YTA5MC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxMVQxNTUxNDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYjA5NDQwYWE0YzQ4NmVlZmRlNmRkOGI4YjU0NDVmMTc3NTg3MGU1NjI5N2M5YWU1MWM2N2UzM2NmMDg4YzU5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Bf3bmytgMZJgzphGz-1D71mfiNMqezi37NPLcWXE6sU)
+
+
 
     
 
