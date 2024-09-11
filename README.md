@@ -195,7 +195,7 @@ DevOps can help organizations evolve and improve products at a faster pace.
 
 ** harvard architecture - Harvard Architecture is the digital computer architecture whose design is based on the concept where there are separate storage and separate buses (signal path) for instruction and data. It was basically developed to overcome the bottleneck of Von Neumann Architecture.**
 
-[!image](https://miro.medium.com/v2/resize:fit:1400/0*05Cl58eW6ldeITMZ.jpg)
+![image](https://miro.medium.com/v2/resize:fit:1400/0*05Cl58eW6ldeITMZ.jpg)
 
 
 
