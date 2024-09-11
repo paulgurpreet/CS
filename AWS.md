@@ -10,7 +10,7 @@
 
 **sudo apt update  then**
 
-**sudo apt apache2 then**
+**sudo apt install apache2   to install a web server on ip then**
 
 **cd /var/www/html/   then**
 
