@@ -186,6 +186,14 @@ DevOps can help organizations evolve and improve products at a faster pace.
 #### ALWAYS REMEMBER ABSTRACTION COMES WITH COST
 
 
+22. # Von Neumann architecture and harvard architecture
+
+** Von Neumann architecture - Von Neumann Architecture is a digital computer architecture whose design is based on the concept of stored program computers where program data and instruction data are stored in the same memory. This architecture was designed by the famous mathematician and physicist John Von Neumann in 1945.**
+
+
+** harvard architecture - Harvard Architecture is the digital computer architecture whose design is based on the concept where there are separate storage and separate buses (signal path) for instruction and data. It was basically developed to overcome the bottleneck of Von Neumann Architecture.**
+
+
 
     
 
