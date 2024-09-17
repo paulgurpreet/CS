@@ -63,7 +63,7 @@ vi index.html
 ```terminal
 curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
 ```
-**this will install and  docker in your vm**
+**this will install and run docker in your vm**
 
 ```terminal
 newgrp docker
