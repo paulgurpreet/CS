@@ -144,7 +144,7 @@ docker rm docker-nginx
 **remove the container**
 
 
-### Building a Web Page to Serve on Nginx
+## Building a Web Page to Serve on Nginx
 
 
 ```terminal
