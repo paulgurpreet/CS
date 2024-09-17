@@ -61,7 +61,7 @@ $ vi index.html
 
 **after that run it and write username as ubuntu as selected os and then type following commands**
 ```terminal
-$ curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
+curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
 ```
 **this will install and  docker in your vm**
 
