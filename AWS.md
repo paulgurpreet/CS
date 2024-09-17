@@ -8,38 +8,38 @@
 
 
 ```
-$ sudo apt update
+sudo apt update
 ```
 
 ```
-$ sudo apt install apache2
+sudo apt install apache2
 ```
 **to install a web server on ip then**
 
 ```
-$ sudo su
+sudo su
 ```
  **for convert $ into # for getting admin role then**
 
 ```
-$ cd /var/www/html/
+cd /var/www/html/
 ```
    
    **then**
 
 ```
-$ ls
+ls
 ```
   **for list of html file in it**
 
 **then copy that html file name and write**
 ```
-$ rm index.html
+rm index.html
 ```
 **rm means remove command**
 
 ```
-$ vi index.html
+vi index.html
 ```
  **this will open a notepad like and write html code there like (vi is editor) -**
 
@@ -66,30 +66,30 @@ curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-in
 **this will install and  docker in your vm**
 
 ```terminal
-$ newgrp docker
+newgrp docker
 ```
 **this will add new group in docker**
 
 ```terminal
-$ docker ps
+docker ps
 ```
 **this will list docker**
 
 ```terminal
-$ docker --version
+docker --version
 ```
 **this will display the version of docker installed**
 
 ### now installing nginx
 
 ```terminal
-$ docker pull nginx
+docker pull nginx
 ```
 **You can download Nginx from a pre-built Docker image, with a default Nginx configuration, by above command.
 This downloads all the necessary components for the container.**
 
 ```terminal
-$ docker run --name docker-nginx -p 80:80 nginx
+docker run --name docker-nginx -p 80:80 nginx
 ```
 **Nginx installed, you can configure the container so that it’s publicly accessible as a web server.**
 
@@ -111,35 +111,35 @@ $ docker run --name docker-nginx -p 80:80 nginx
 
 
 ```terminal
-$ docker ps -a
+docker ps -a
 ```
 **verify the container status with this command**
 
 ```terminal
-$ docker rm docker-nginx
+docker rm docker-nginx
 ```
 **Remove the existing  container**
 
 ```terminal
-$ docker run --name docker-nginx -p 80:80 -d nginx
+docker run --name docker-nginx -p 80:80 -d nginx
 ```
 **Create a new, detached Nginx container,By attaching the -d flag, you are running this container in the background.**
 
 
 ```terminal
-$ docker ps
+docker ps
 ```
 **this will obtain info about your container**
 
 
 ```terminal
-$ docker stop docker-nginx
+docker stop docker-nginx
 ```
 **Stop the container**
 
 
 ```terminal
-$ docker rm docker-nginx
+docker rm docker-nginx
 ```
 **remove the container**
 
@@ -148,19 +148,19 @@ $ docker rm docker-nginx
 
 
 ```terminal
-$ mkdir -p ~/docker-nginx/html
+mkdir -p ~/docker-nginx/html
 ```
 **Create a new directory for your website content within the home directory**
 
 
 ```terminal
-$ cd ~/docker-nginx/html
+cd ~/docker-nginx/html
 ```
 **by this you navigate into this**
 
 
 ```terminal
-$ vi index.html
+vi index.html
 ```
 **now press i and write your code in html like**
 
@@ -170,7 +170,7 @@ $ vi index.html
 
 
 ```terminal
-$ docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
 ```
 **Linking the Container to the Local Filesystem**
 
@@ -180,30 +180,30 @@ $ docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/n
 ## Using Your Own Nginx Configuration File
 
 ```terminal
-$ cd ~/docker-nginx
+cd ~/docker-nginx
 ```
 
 ```terminal
-$ docker cp docker-nginx:/etc/nginx/conf.d/default.conf default.conf
+docker cp docker-nginx:/etc/nginx/conf.d/default.conf default.conf
 ```
 **Copy the Nginx config directory into your project folder**
 
 
 
 ```terminal
-$ docker stop docker-nginx
+docker stop docker-nginx
 ```
 
 
 ```terminal
-$ docker rm docker-nginx
+docker rm docker-nginx
 ```
 **to rebuild the container stop the container then remove it**
 
 
 
 ```terminal
-$ docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
 ```
 **This command links the custom website pages to the container.**
 
@@ -211,7 +211,7 @@ $ docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/ngin
 
 
 ```
-$ docker restart docker-nginx
+docker restart docker-nginx
 ```
 **you need to restart your container and your changes should be reflected on the associated pages.**
 
