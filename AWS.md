@@ -53,7 +53,7 @@ vi index.html
 **now copy your public ip and paste it on browser you will see the texts written by you (by using html above)**
 
 
-# 2. USING DOCKER IN AWS (AND BUILD NGINX WEB SERVER ON IT)
+# 2. USING CONTAINER IN VM and adding nginx server
 
 **First open aws search EC2 then Launch Instance and there select keypair in putty then download it**
 
