@@ -68,7 +68,7 @@ curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-in
 ```terminal
 newgrp docker
 ```
-**this will add new group in docker**
+**this command will help us to use docker**
 
 ```terminal
 docker ps
