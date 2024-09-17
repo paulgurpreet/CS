@@ -102,7 +102,7 @@ docker run --name docker-nginx -p 80:80 nginx
 **nginx is the name of the image on Docker Hub.**
 
 
-### now this will show this on yoru public ip
+### now this will show this on your public ip
 ![Screenshot 2024-09-17 185925](https://github.com/user-attachments/assets/bb2255a5-8c0b-4d5b-81ee-a1c6a552f5da)
 
 
