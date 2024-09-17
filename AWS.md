@@ -213,7 +213,7 @@ docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/
 ```
 docker restart docker-nginx
 ```
-**you need to restart your container and your changes should be reflected on the associated pages.**
+**you need to restart your container to reflect changes  on the associated pages.**
 
 
 
