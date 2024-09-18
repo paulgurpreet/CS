@@ -60,35 +60,35 @@ vi index.html
 **after that edit network setting and click on add security group rule and select TCP,UDP,ALL TRAFFIC AND SELECT EVERYWHERE SOURCE TYPE IN THEM then Launch it and run putty and paste public id on HOST NAME and open that downloaded key pair for putty in SSH then Auth then Credentials and open there**
 
 **after that run it and write username as ubuntu as selected os and then type following commands**
-```terminal
+```
 curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
 ```
 **this will install and run docker in your vm**
 
-```terminal
+```
 newgrp docker
 ```
 **this command will help us to use docker**
 
-```terminal
+```
 docker ps
 ```
 **this will list docker**
 
-```terminal
+```
 docker --version
 ```
 **this will display the version of docker installed**
 
 ### now installing nginx
 
-```terminal
+```
 docker pull nginx
 ```
 **You can download Nginx from a pre-built Docker image, with a default Nginx configuration, by above command.
 This downloads all the necessary components for the container.**
 
-```terminal
+```
 docker run --name docker-nginx -p 80:80 nginx
 ```
 **Nginx installed, you can configure the container so that it’s publicly accessible as a web server.**
@@ -110,35 +110,35 @@ docker run --name docker-nginx -p 80:80 nginx
 #### In your terminal, enter CTRL+C to stop the container from running.
 
 
-```terminal
+```
 docker ps -a
 ```
 **verify the container status with this command**
 
-```terminal
+```
 docker rm docker-nginx
 ```
 **Remove the existing  container**
 
-```terminal
+```
 docker run --name docker-nginx -p 80:80 -d nginx
 ```
 **Create a new, detached Nginx container,By attaching the -d flag, you are running this container in the background.**
 
 
-```terminal
+```
 docker ps
 ```
 **this will obtain info about your container**
 
 
-```terminal
+```
 docker stop docker-nginx
 ```
 **Stop the container**
 
 
-```terminal
+```
 docker rm docker-nginx
 ```
 **remove the container**
@@ -147,19 +147,19 @@ docker rm docker-nginx
 ## Building a Web Page to Serve on Nginx
 
 
-```terminal
+```
 mkdir -p ~/docker-nginx/html
 ```
 **Create a new directory for your website content within the home directory**
 
 
-```terminal
+```
 cd ~/docker-nginx/html
 ```
 **by this you navigate into this**
 
 
-```terminal
+```
 vi index.html
 ```
 **now press i and write your code in html like**
@@ -169,7 +169,7 @@ vi index.html
 **then press ctrl+c then shift+colon then write wq and enter**
 
 
-```terminal
+```
 docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
 ```
 **Linking the Container to the Local Filesystem**
@@ -179,30 +179,30 @@ docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/ngi
 
 ## Using Your Own Nginx Configuration File
 
-```terminal
+```
 cd ~/docker-nginx
 ```
 
-```terminal
+```
 docker cp docker-nginx:/etc/nginx/conf.d/default.conf default.conf
 ```
 **Copy the Nginx config directory into your project folder**
 
 
 
-```terminal
+```
 docker stop docker-nginx
 ```
 
 
-```terminal
+```
 docker rm docker-nginx
 ```
 **to rebuild the container stop the container then remove it**
 
 
 
-```terminal
+```
 docker run --name docker-nginx -p 80:80 -v ~/docker-nginx/html:/usr/share/nginx/html -v ~/docker-nginx/default.conf:/etc/nginx/conf.d/default.conf -d nginx
 ```
 **This command links the custom website pages to the container.**
