@@ -1,6 +1,14 @@
 # 1. using EC2 in aws
 
-**First open aws search EC2 then Launch Instance and there select keypair in putty then download it**
+**First open aws search EC2 then Launch Instance and there select keypair in putty or pem then download it**
+
+### using pem file for linux
+```
+ssh -i /path/to/your/pemfile.pem ec2-user@your-ec2-public-ip
+```
+
+
+### using putty
 
 **after that Launch it and run putty and paste public id on HOST NAME and open that downloaded key pair for putty in SSH then Auth then Credentials and open there**
 
