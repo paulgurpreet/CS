@@ -265,7 +265,7 @@ newgrp docker
 ```
 sudo snap install kubectl --classic
 ```
-**it will intall kubernetes**
+**it will intall kubectl tools**
 
 
 
