@@ -412,7 +412,7 @@ kubectl proxy --address='0.0.0.0' --disable-filter=true &
 ```
 http://server_ip:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
 ```
-### Now got above link and replace server_ip with your public ip and it will show you like :
+### Now go to above link and replace server_ip with your public ip and it will show you like :
 
 ![minik8s](https://github.com/user-attachments/assets/f92e7dca-a8c0-4c8e-aae8-4a0c88c5443e)
 
