@@ -390,7 +390,7 @@ minikube addons enable ingress
 
 
 ```
-minikube dashboard --url**
+minikube dashboard --url
 ```
 **it will get the url and run the dashboard of MiniKube**
 
