@@ -419,6 +419,22 @@ http://server_ip:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kuber
 
 
 
+# 4.  OPENSTACK ON AWS
+
+
+
+```
+sudo snap install openstack --channel 2024.1/beta
+```
+**Begin by installing the openstack snap**
+
+
+
+```
+
+
+
+
 
 
 
