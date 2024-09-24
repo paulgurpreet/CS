@@ -2,7 +2,9 @@
 - 1. USING EC2 IN AWS
 - 2. USING CONTAINER IN VM and adding nginx server by Docker
 - 3. USING MINIKUBE
-  
+- 4. OPENSTACK_ON_AWS
+ 
+      
 # 1. using EC2 in aws
 
 **First open aws search EC2 then Launch Instance and there select keypair in putty or pem then download it**
@@ -431,6 +433,34 @@ sudo snap install openstack --channel 2024.1/beta
 
 
 ```
+sunbeam prepare-node-script
+```
+**Sunbeam can generate a script to ensure that the machine has all of the required dependencies installed and is configured correctly for use in OpenStack**
+
+
+```
+sunbeam prepare-node-script | bash -x && newgrp snap_daemon
+```
+**The script will ensure some software requirements are satisfied on the host**
+
+
+
+```
+sunbeam cluster bootstrap --accept-defaults
+```
+**Bootstrap the cloud**
+
+
+```
+sunbeam configure --accept-defaults --openrc demo-openrc
+```
+**configure the deployed cloud using the configure command**
+
+
+```
+sunbeam launch ubuntu --name test
+```
+**Launching a VM on openstack**
 
 
 
