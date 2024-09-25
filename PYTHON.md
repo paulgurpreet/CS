@@ -104,6 +104,14 @@ There are many libraries available for Python, some of the most popular ones inc
 4. Scikit-learn: A library for machine learning in Python. It provides tools for classification, regression, clustering, and more.
 
 5. TensorFlow: A library for building and training machine learning models in Python. It’s widely used for deep learning, computer vision, natural language processing, and more.
+
+#
+#
+**A simple integer in Python takes up 28 bytes of memory because of the following overheads:
+Reference count: 8 bytes
+Type pointer: 8 bytes
+Size: 8 bytes
+Integer value: 4 bytes**
    
 6. OpenCV: A library for computer vision in Python. It provides tools for image and video processing, feature detection and extraction, and more.
 
