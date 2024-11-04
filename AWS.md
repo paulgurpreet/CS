@@ -485,6 +485,20 @@ AND CREATE LOAD BALANCER , NOW COPY YOUR LOAD BALANCER'S DNS NAME AND PASTE IT I
 ![L2](https://github.com/user-attachments/assets/dde85906-1283-41df-bc05-38091c2564d8)
 
 
+###NOW ON ANY 1 INSTANCE WRITE FOLLOWING COMMANDS IN PUTTY-
+```
+seq 999999999999999999999 > /dev/null &
+```
+**for making Artificial load
+```
+htop
+```
+**for monitoring
+
+
+![tttk](https://github.com/user-attachments/assets/8ed09359-175e-4a55-987a-0e22f125a600)
+
+
 
 
 
