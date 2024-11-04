@@ -475,7 +475,7 @@ Now create 2 instances of same type with select VPC which you created and using 
 ![1t](https://github.com/user-attachments/assets/fe4e0efe-142a-4f6e-900b-66eab17f5cf5)
 ![2t](https://github.com/user-attachments/assets/6131bb31-4180-462c-941f-bc006fb79e08)
 
-Now to create LOAD BALANCER OF APPLICTION TYPE , WE NEED TO CREATE TARGET GROUP AND ATTACH BOTH EC2 INSTANCES WE CREATED AND EDIT HEALTH CHECK-UPS AS-
+Now to create LOAD BALANCER (WE NAMED server-computer HERE ) OF APPLICTION TYPE , WE NEED TO CREATE TARGET GROUP AND ATTACH BOTH EC2 INSTANCES WE CREATED AND EDIT HEALTH CHECK-UPS AS-
 ![HELTH](https://github.com/user-attachments/assets/91af3b9a-95fe-49a7-a3c9-dc953323cf7a)
 
 
