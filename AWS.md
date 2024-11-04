@@ -468,10 +468,20 @@ sunbeam launch ubuntu --name test
 
 
 # VPC
+![90](https://github.com/user-attachments/assets/10343b81-c870-420f-a2a5-63036d73c386)
 
-GO TO VPC ND CREATE VPC THEN CREATE 4 SUBNETS - 2 PVT 2 PUBLIC WITH ADDRESS 10.0.1.0/24 , 10.0.2.0/24 , 10.0.3.0/24 , 10.0.4.0/24 THEN CREATE INTERNET GATEWAY AND CONNECT VPC TO IT AND THEN CREATE VGW AND CONNECT(ATTACH) VPC TO IT. NOW GO TO ROUTE TABLES AND CREATE 2 ROUTE TABLE - R1-IGW , R2-VGW AND EDIT ROUTES WITH 0.0.0.0/0 AND 192.168.0.0/16 RESPECTIVELY AND TARGET IGW AND VGW RESPECTIVELY.
+
+GO TO VPC ND CREATE VPC THEN CREATE 4 SUBNETS - 2 PVT 2 PUBLIC WITH ADDRESS 10.0.1.0/24 , 10.0.2.0/24 , 10.0.3.0/24 , 10.0.4.0/24 
+![subnet](https://github.com/user-attachments/assets/20e39867-6cf0-4b63-928d-edb4da49fc32)
+
+THEN CREATE INTERNET GATEWAY AND CONNECT VPC TO IT AND THEN CREATE VGW AND CONNECT(ATTACH) VPC TO IT. NOW GO TO ROUTE TABLES AND CREATE 2 ROUTE TABLE - R1-IGW , R2-VGW AND EDIT ROUTES WITH 0.0.0.0/0 AND 192.168.0.0/16 RESPECTIVELY AND TARGET IGW AND VGW RESPECTIVELY.
+![rr](https://github.com/user-attachments/assets/0cd8bf7a-17d0-48e8-a9b8-72ce479a79a1)
+
+
 
 Now create 2 instances of same type with select VPC which you created and using putty download apache-2 on both and edit like test-1 and test-2 respectively for better understanding.Like
+![tt23](https://github.com/user-attachments/assets/c0a20bf6-b54d-4c9c-af59-320ec88f2f23)
+
 ![1t](https://github.com/user-attachments/assets/fe4e0efe-142a-4f6e-900b-66eab17f5cf5)
 ![2t](https://github.com/user-attachments/assets/6131bb31-4180-462c-941f-bc006fb79e08)
 
