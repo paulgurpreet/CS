@@ -80,6 +80,58 @@ else:
 
 #PRACTICAL-5
 
+(a)
+string = "hello welcome to python"
+character = input("enter a character :")
+f = 0
+for i in string:
+ if i == character:
+  f += 1
+print("frequency of",character,'is',f)
+
+(b)
+string = "hello welcome to python"
+print(string.replace("h","t"))
+
+(c)
+string = "hello welcome to python"
+print(string[1:len(string)])
+
+(d)
+
+string = "hello welcome to python"
+print(string[:0])
+
+#PRACTICAL-6
+str1 = input("enter first string: ")
+str2 = input("enter second string: ")
+n1 = int(input("enter no of character which is to be swap: "))
+n = str1[ :n1]
+m = str2[ :n1]
+if n1 <= min(len(str1),len(str2)):
+ print(str1.replace(n,m))
+else:
+ print(str2.replace(m,n))
+
+#PRACTICAL-7
+
+def occurances(a,b):
+ newlist =[]
+ if b not in a:
+     print(-1)
+ else:
+     i= 0
+     while i< len(a):
+        c=a.find(b,i)
+        if c== -1:
+            break
+        i= c+ len(b)
+        newlist.append(c)
+     print(newlist)
+a= input("enter first string ;")
+b= input("enter second string ;")
+occurances(a,b)
+
 
 
           
