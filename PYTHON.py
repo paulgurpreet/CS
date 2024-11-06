@@ -1,6 +1,6 @@
 #PRACTICAL-1
 
-a,b,c= eval(input("enter value separated by commas : "))
+a,b,c= eval(input("enter values( of x1,x2,constant) separated by commas : "))
 
 d = b * 2 - 4 * a *c
 r1 = (-b + (d) * 0.5) / 2 * a
