@@ -132,6 +132,6 @@ a= input("enter first string ;")
 b= input("enter second string ;")
 occurances(a,b)
 
-
+# PRACTICAL-8
 
           
