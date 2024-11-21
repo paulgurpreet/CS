@@ -10,6 +10,9 @@ if d >=0:
     print("roots are real " ,r1 ,r2)
 else:
     print("roots are not real")
+![Screenshot 2024-11-22 025656](https://github.com/user-attachments/assets/f96908d0-7f02-4600-ab84-d93fc7e0e56e)
+
+
 
 #PRACTICAL-2
 #wAP to accept a number ‘n’ and  
@@ -29,6 +32,10 @@ if n>1:
           
 else:
         print(n,"is not a prime number ")
+![Screenshot 2024-11-22 025842](https://github.com/user-attachments/assets/0d0e21fb-fd6f-4894-83f6-dc0d62595f91)
+
+
+
 
 #(b)
 n = eval(input("enter value "))
@@ -39,6 +46,9 @@ for num in range(1,n):
             break
         else:
             print(num,end =',')
+![Screenshot 2024-11-22 030029](https://github.com/user-attachments/assets/2b82f21e-af4c-457f-8739-5313fa8c6d41)
+
+
 #(c)
 n = eval(input("enter value "))
 count = 0
@@ -52,6 +62,8 @@ while count < n:
         print(number,end=',')
         count += 1
         number += 1
+![Screenshot 2024-11-22 030106](https://github.com/user-attachments/assets/60664312-3328-4d89-a398-1a9382b30520)
+
 
 #PRACTICAL-3
 #WAP to create a pyramid of the character ‘*’ and a reverse pyramid 
@@ -79,6 +91,8 @@ for i in range (n):
  for j in range(2*n-2*i-3):
      print("*",end =" ")
 print()
+
+
 
 #PRACTICAL-4
 #WAP that accepts a character and performs the following: 
