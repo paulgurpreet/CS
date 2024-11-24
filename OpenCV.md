@@ -72,12 +72,4 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
----
 
-## Documentation
-
-Find detailed usage and API examples in the `docs/` folder:
-- [Installation Guide](docs/installation_guide.md)
-- [API Usage](docs/api_usage.md)
-
----
