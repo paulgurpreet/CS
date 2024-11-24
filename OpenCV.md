@@ -29,7 +29,6 @@ Ensure you have Python (latest version )installed.
 
 ---
 
-## Usage Examples
 
 ### Image Processing Example
 
