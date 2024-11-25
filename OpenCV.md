@@ -7,27 +7,22 @@
 Ensure you have Python (latest version )installed.
 
 ### Steps
+**OPEN POWERSHELL AND WRITE**
 
-1. Clone the repository:
+```
+python --version
+```
+**to check if python is installed**
 
-   ```bash
-   git clone https://github.com/your-username/opencv-python-repo.git
-   cd opencv-python-repo
-   ```
+```
+install opencv-contrib-python
+```
+**this will install opencv lib. with the contributions**
 
-2. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Test the installation by running an example:
-
-   ```bash
-   python examples/image_processing/edge_detection.py
-   ```
-
----
+```
+pip install caer
+```
+**Caer is a Python library that can be used with OpenCV to simplify computer vision and speed up workflows**
 
 
 ### Image Processing Example
