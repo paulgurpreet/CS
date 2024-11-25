@@ -3,6 +3,7 @@
 - 2. USING CONTAINER IN VM and adding nginx server by Docker
 - 3. USING MINIKUBE
 - 4. OPENSTACK_ON_AWS
+- 5. VPC
  
       
 # 1. using EC2 in aws
