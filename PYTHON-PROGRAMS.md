@@ -85,6 +85,25 @@ OUTPUT -
 
 ## PRACTICAL-3
 ##### WAP to create a pyramid of the character ‘*’ and a reverse pyramid 
+```
+n = int(input("enter the no of rows :"))
+for i in range(n):
+    for j in range(n-i-1):
+        print(" ",end =" ")
+    for j in range(2*i+1):
+        print("*",end =" ")
+    print()
+
+for i in range(n):
+    for j in range(i+1):
+        print(" ",end = " ")
+    for j in range(2*n-2*i-3):
+        print("*",end =" ")
+    print()
+```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/0a60fdbc-7a09-4545-8145-b58831436686)
 
 
 
