@@ -163,6 +163,12 @@ string = "hello welcome to python"
 print(string[:0])
 ```
 
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/2a083e95-04f7-42f6-be61-1cb1c1953ae4)
+
+
+
 
 ## PRACTICAL-6
 ##### WAP to swap the first n characters of two strings
