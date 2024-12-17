@@ -208,10 +208,15 @@ def occurances(a,b):
         i= c+ len(b)
         newlist.append(c)
      print(newlist)
-a= input("enter first string ;")
-b= input("enter second string ;")
+a= input("enter first string :")
+b= input("enter second string :")
 occurances(a,b)
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/1fcd0b57-d673-4628-aa62-76921a3e74e8)
+
+
 
 
 ## PRACTICAL-8
@@ -227,9 +232,15 @@ def cubes():
      if type(i)== int:
          if i % 2 == 0:
              newlist.append(i**3)
-         print(newlist)
+ print(newlist)
 cubes()
 ```
+OUTPUT -
+
+![333](https://github.com/user-attachments/assets/9343d916-d5d0-48be-97e7-4655a95b0319)
+
+
+
 ## PRACTICAL-9
 
 ## PRACTICAL-10
@@ -246,6 +257,10 @@ def cubes():
  print(dict)
 cubes()
 ```
+OUTPUT -
+
+![444](https://github.com/user-attachments/assets/a6bcfc4a-db4f-49d4-bbe5-2b3bd6447252)
+
 
 
 ## PRACTICAL-12
@@ -292,7 +307,7 @@ print("minimum value in t1 is ",min(t1))
 ##### exception(s) if the text entered by the user contains digits and/or special
 ##### characters.
 ```
-name = input("enter a name ")
+name = input("enter a name :")
 try:
  if name.isalpha():
      print("This is correct Name")
@@ -301,3 +316,7 @@ try:
 except Exception as e:
  print(e)
 ```
+OUTPUT -
+
+![555](https://github.com/user-attachments/assets/2d68aee4-98fa-47b2-9bac-984c96d79cf9)
+
