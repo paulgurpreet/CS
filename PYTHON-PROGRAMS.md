@@ -11,6 +11,10 @@ if d >=0:
 else:
     print("roots are not real")
 ```
+OUTPUT - 
+
+![222](https://github.com/user-attachments/assets/6931a297-3a87-431a-9374-b0ea4f685308)
+
 
 
 
