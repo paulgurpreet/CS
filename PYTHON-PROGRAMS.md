@@ -48,7 +48,7 @@ OUTPUT -
 
 #### (b)
 ```
-n = eval(input("enter value "))
+n = eval(input("enter value: "))
 for num in range(1,n):
     if num > 1:
         for i in range (2,num):
@@ -57,6 +57,9 @@ for num in range(1,n):
         else:
             print(num,end =',')
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/f7a9fc8f-225c-49f3-9c70-e16161305b19)
 
 
 #### (c)
