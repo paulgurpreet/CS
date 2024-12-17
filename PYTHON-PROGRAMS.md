@@ -38,6 +38,9 @@ if n>1:
 else:
         print(n,"is not a prime number ")
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/92d25a74-47f4-4b9e-b58c-19b8369c47b7)
 
 
 
