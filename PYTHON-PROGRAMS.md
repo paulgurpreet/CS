@@ -142,6 +142,11 @@ OUTPUT -
 string = "hello welcome to python"
 print(string.replace("h","t"))
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/630b8d89-4302-455d-b02a-4c5d5a91ed80)
+
+
 ##### (c)
 ```
 string = "hello welcome to python"
