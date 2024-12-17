@@ -132,6 +132,11 @@ for i in string:
   f += 1
 print("frequency of",character,'is',f)
 ```
+OUTPUT - 
+
+![222](https://github.com/user-attachments/assets/c842d17d-72cd-441d-9df7-ab08da0bace2)
+
+
 ##### (b)
 ```
 string = "hello welcome to python"
