@@ -183,6 +183,11 @@ if n1 <= min(len(str1),len(str2)):
 else:
    print(str2.replace(m,n))
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/8a034366-155e-4186-96e6-286dbc73d853)
+
+
 
 
 ## PRACTICAL-7
