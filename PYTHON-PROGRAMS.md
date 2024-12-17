@@ -261,6 +261,83 @@ OUTPUT -
 
 
 ## PRACTICAL-9
+##### WAP to read a file and
+##### (a) Print the total number of characters, words and lines in the file.
+##### (b) Calculate the frequency of each character in the file. Use a variable of dictionary
+##### type to maintain the count.
+##### (c) Print the words in reverse order.
+##### (d) Copy even lines of the file to a file named ‘File1’ and odd lines to another file
+named ‘File2’.
+```
+def process_file(input_file):
+    try:
+        with open(input_file, 'r') as file:
+            lines = file.readlines()  
+        
+        
+        total_characters = total_words = total_lines = 0
+        char_frequency = {}
+        even_lines = []
+        odd_lines = []
+        words_in_reverse = []
+
+        for i, line in enumerate(lines):
+            total_lines += 1
+            total_characters += len(line)
+            
+            words = line.split()
+            total_words += len(words)
+            
+            
+            for char in line:
+                if char != " " and char != "\n":  
+                    char_frequency[char] = char_frequency.get(char, 0) + 1
+            
+            
+            words_in_reverse.extend(words[::-1])  
+            
+            
+            if (i + 1) % 2 == 0:  
+                even_lines.append(line)
+            else:  
+                odd_lines.append(line)
+        
+        
+        print("(a) Total Number of Characters:", total_characters)
+        print("   Total Number of Words:", total_words)
+        print("   Total Number of Lines:", total_lines)
+
+        print("(b) Character Frequency:")
+        for char, count in char_frequency.items():
+            print(f"   {char}: {count}")
+
+        print("(c) Words in Reverse Order:")
+        print(" ".join(words_in_reverse))
+
+        
+        with open("File1.txt", 'w') as file1:
+            file1.writelines(even_lines)
+
+        with open("File2.txt", 'w') as file2:
+            file2.writelines(odd_lines)
+
+        print("(d) Even lines copied to 'File1.txt' and odd lines to 'File2.txt'.")
+
+    except FileNotFoundError:
+        print("Error: The file does not exist.")
+    except Exception as e:
+        print("Error:", e)
+
+
+# Input file name
+input_file = input("Enter the file name to process: ")
+process_file(input_file)
+```
+OUTPUT -
+
+![333](https://github.com/user-attachments/assets/03d789c9-6d90-4090-8de1-d057754bbd52)
+
+
 
 ## PRACTICAL-10
 
