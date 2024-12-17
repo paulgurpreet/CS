@@ -152,6 +152,11 @@ OUTPUT -
 string = "hello welcome to python"
 print(string[1:len(string)])
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/68babbe3-0ce3-4417-83b5-8d637e94539d)
+
+
 ##### (d)
 ```
 string = "hello welcome to python"
