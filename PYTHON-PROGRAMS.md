@@ -64,7 +64,7 @@ OUTPUT -
 
 #### (c)
 ```
-n = eval(input("enter value "))
+n = eval(input("enter value: "))
 count = 0
 number = 2
 while count < n:
@@ -77,6 +77,11 @@ while count < n:
         count += 1
         number += 1
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/3ffac892-9f53-4c80-885a-c718e41defc9)
+
+
 
 ## PRACTICAL-3
 ##### WAP to create a pyramid of the character ‘*’ and a reverse pyramid 
