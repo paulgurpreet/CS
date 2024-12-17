@@ -96,19 +96,23 @@ OUTPUT -
 ##### (c). if the character is a numeric digit, prints its name in text (e.g., if input is 9, 
 ##### output is NINE) 
 ```
-character = input("enter data ")
+character = input("enter data :")
 if character >='A' and character<='Z':
    print("uppercase letter")
 elif character >='a' and character<='z':
    print("lowercase letter")
 elif character >='0' and character<='9':
-   print("numeric digit")
+ print("numeric digit")
  n = int(character)
  dict ={0:'zero',1:'first',2:'two',3:'three',4:'four',5:'five',6:'six',7:'seven',8:'eight',9:'nine'}
  print(dict[n])
 else:
    print("special character")
 ```
+OUTPUT - 
+
+![222](https://github.com/user-attachments/assets/346f7902-2df1-407d-bf23-608dab059b9d)
+
 
 
 ## PRACTICAL-5
