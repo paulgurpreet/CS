@@ -281,12 +281,22 @@ print("first_half",first_half)
 second_half = t1[half_value: ]
 print("second_half",second_half)
 ```
+OUTPUT -
+
+![222](https://github.com/user-attachments/assets/0d4e9dda-295c-4fda-87ad-a8858fef9f9d)
+
+
 ##### (b)
 ```
 t1 = (1,2,5,7,9,2,4,6,8,10)
 even_number= tuple(filter(lambda x: x%2==0,t1))
 print("tuple with even number",even_number)
 ```
+OUTPUT -
+
+![333](https://github.com/user-attachments/assets/e6138738-488c-4059-93a5-74db32ac06df)
+
+
 
 ##### (c)
 ```
@@ -295,12 +305,21 @@ t2 = (11,13,15)
 concatenation= (t1 + t2)
 print("tuple with concatenation ", concatenation)
 ```
+OUTPUT -
+
+![444](https://github.com/user-attachments/assets/2fb2347b-28c3-4447-91c3-9cdbf4fe29d2)
+
+
 ##### (d)
 ```
 t1= (1, 2, 5, 7, 9, 2, 4, 6, 8, 10, 11, 13, 15)
 print("maximum value in t1 is ",max(t1))
 print("minimum value in t1 is ",min(t1))
 ```
+OUTPUT -
+
+![555](https://github.com/user-attachments/assets/106cea83-6053-4a89-8040-501b72a88e1f)
+
 
 ## PRACTICAL -13
 ##### Wap to accept a name from a user. Raise and handle appropriate
