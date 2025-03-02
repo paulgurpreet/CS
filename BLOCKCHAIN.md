@@ -97,6 +97,7 @@ to initialise ipfs
 ipfs daemon
 ```
 to use daemon
+
 ![one](https://github.com/user-attachments/assets/28cf8c2c-f1d6-44f3-ade3-37cb24e5b492)
 
 
@@ -111,6 +112,7 @@ ipfs add hello.txt
 ipfs cat <CID>
 ```
 to add file
+
 ![two](https://github.com/user-attachments/assets/a3498732-e133-41c6-a4f2-7b1e21234150)
 
 ```
@@ -120,6 +122,7 @@ echo "File 2 content" > myfolder/file2.txt
 ipfs add -r myfolder
 ```
 to add a directory
+
 ![three](https://github.com/user-attachments/assets/4e0d51e5-ae0e-4034-b79d-fe3ac89a0666)
 
 
@@ -144,6 +147,7 @@ openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -in myfile_encrypted.txt -out d
 cat decrypted_file.txt
 ipfs add decrypted_file.txt
 ```
+
 ![enc-dec](https://github.com/user-attachments/assets/293f1b3a-4ba4-4b35-8f04-d93fb9c9a6f7)
 
 
@@ -153,6 +157,7 @@ ipfs add decrypted_file.txt
 ipfs add <audio-path>
 ```
 to add audio
+
 ![audio](https://github.com/user-attachments/assets/63297200-f2dd-48e0-ae29-a319240ec2d5)
 
 
@@ -160,6 +165,7 @@ to add audio
 ipfs add <video-path>
 ```
 to add video
+
 ![video](https://github.com/user-attachments/assets/131c2e88-a2fa-47a1-93f3-22d615d2e1bd)
 
 
