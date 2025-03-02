@@ -160,7 +160,8 @@ to add audio
 ipfs add <video-path>
 ```
 to add video
-[ubuntu-screen0.webm](https://github.com/user-attachments/assets/029f1947-7e20-4308-9e62-dfbbe120ecc8)
+![video](https://github.com/user-attachments/assets/131c2e88-a2fa-47a1-93f3-22d615d2e1bd)
+
 
 
 
