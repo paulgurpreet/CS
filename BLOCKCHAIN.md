@@ -136,7 +136,7 @@ kill <PID>
 ```
 to kill the process
 
-### encrypting and decrypting
+## encrypting and decrypting
 ```
 echo "Hello, bruh" > myfile.txt
 ipfs add myfile.txt
@@ -151,7 +151,7 @@ ipfs add decrypted_file.txt
 ![enc-dec](https://github.com/user-attachments/assets/293f1b3a-4ba4-4b35-8f04-d93fb9c9a6f7)
 
 
-### now to push video and audio
+## to push video and audio
 
 ```
 ipfs add <audio-path>
