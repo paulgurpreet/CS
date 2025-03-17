@@ -10,12 +10,12 @@ command line argument is not found then prompt the user to enter the value of n
 using namespace std;
 
 double computeSeries(int n) {
-    double sum = 1.0;  // First term is always 1
+    double sum = 1.0;
 
     for (int i = 2; i <= n; i++) {
         double term = 1.0 / pow(i, i);
         if (i % 2 == 0) {
-            term = -term;  // Make even-indexed terms negative
+            term = -term;
         }
         sum += term;
     }
@@ -43,14 +43,14 @@ Write a program to remove the duplicates from an array
 
 using namespace std;
 
-// Function to remove duplicates from an array
+
 int removeDuplicates(int arr[], int n) {
     int uniqueCount = 0;
 
     for (int i = 0; i < n; i++) {
         bool isDuplicate = false;
 
-        // Check if arr[i] is already in the unique part of the array
+
         for (int j = 0; j < uniqueCount; j++) {
             if (arr[i] == arr[j]) {
                 isDuplicate = true;
@@ -58,14 +58,14 @@ int removeDuplicates(int arr[], int n) {
             }
         }
 
-        // If not a duplicate, add it to the unique section
+   
         if (!isDuplicate) {
             arr[uniqueCount] = arr[i];
             uniqueCount++;
         }
     }
 
-    return uniqueCount;  // Return new size of array
+    return uniqueCount;
 }
 
 int main() {
@@ -140,7 +140,7 @@ g. Insert a string in another string at a user specified position
 
 using namespace std;
 
-// Function to display the address of each character in the string
+
 void showAddress(char* str) {
     cout << "Character addresses:\n";
     for (int i = 0; str[i] != '\0'; i++) {
@@ -148,17 +148,17 @@ void showAddress(char* str) {
     }
 }
 
-// Function to concatenate two strings
+
 void concatenate(char* str1, char* str2, char* result) {
     int i = 0, j = 0;
 
-    // Copy first string
+
     while (str1[i] != '\0') {
         result[i] = str1[i];
         i++;
     }
 
-    // Copy second string
+  
     while (str2[j] != '\0') {
         result[i] = str2[j];
         i++; j++;
@@ -284,11 +284,11 @@ Write a program to merge two ordered arrays to get a single ordered array.
 
 using namespace std;
 
-// Function to merge two sorted arrays
+
 void mergeArrays(int arr1[], int size1, int arr2[], int size2, int merged[]) {
     int i = 0, j = 0, k = 0;
 
-    // Merge elements from both arrays in sorted order
+
     while (i < size1 && j < size2) {
         if (arr1[i] < arr2[j]) {
             merged[k++] = arr1[i++];
@@ -297,12 +297,12 @@ void mergeArrays(int arr1[], int size1, int arr2[], int size2, int merged[]) {
         }
     }
 
-    // Copy remaining elements of arr1
+
     while (i < size1) {
         merged[k++] = arr1[i++];
     }
 
-    // Copy remaining elements of arr2
+ 
     while (j < size2) {
         merged[k++] = arr2[j++];
     }
@@ -311,7 +311,7 @@ void mergeArrays(int arr1[], int size1, int arr2[], int size2, int merged[]) {
 int main() {
     int size1, size2;
 
-    // Input first sorted array
+
     cout << "Enter the size of first sorted array: ";
     cin >> size1;
     int arr1[size1];
@@ -321,7 +321,7 @@ int main() {
         cin >> arr1[i];
     }
 
-    // Input second sorted array
+
     cout << "Enter the size of second sorted array: ";
     cin >> size2;
     int arr2[size2];
@@ -333,10 +333,10 @@ int main() {
 
     int merged[size1 + size2]; // Array to store merged result
 
-    // Merge the arrays
+
     mergeArrays(arr1, size1, arr2, size2, merged);
 
-    // Display the merged sorted array
+y
     cout << "Merged sorted array: ";
     for (int i = 0; i < size1 + size2; i++) {
         cout << merged[i] << " ";
@@ -356,7 +356,7 @@ Write a program to search a given element in a set of N numbers using Binary sea
 
 using namespace std;
 
-// Recursive Binary Search
+
 int binarySearchRecursive(int arr[], int left, int right, int key) {
     if (left > right)
         return -1; // Not found
@@ -371,7 +371,7 @@ int binarySearchRecursive(int arr[], int left, int right, int key) {
         return binarySearchRecursive(arr, mid + 1, right, key);
 }
 
-// Iterative Binary Search
+
 int binarySearchIterative(int arr[], int size, int key) {
     int left = 0, right = size - 1;
 
@@ -577,7 +577,7 @@ runtime polymorphism
 
 using namespace std;
 
-// Base class
+
 class Person {
 protected:
     string name;
@@ -685,7 +685,7 @@ private:
     double a, b, c;
 
 public:
-    // Constructor with validation
+
     Triangle(double side1, double side2, double side3) {
         if (side1 <= 0 || side2 <= 0 || side3 <= 0)
             throw invalid_argument("Sides must be greater than zero.");
@@ -697,20 +697,20 @@ public:
         c = side3;
     }
 
-    // Function to calculate area using Heron's formula
+
     double calculateArea() {
         double s = (a + b + c) / 2; // Semi-perimeter
         return sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
-    // Overloaded function to calculate area of a right-angled triangle
+
     static double calculateArea(double base, double height) {
         if (base <= 0 || height <= 0)
             throw invalid_argument("Base and height must be greater than zero.");
         return 0.5 * base * height;
     }
 
-    // Display function
+
     void display() {
         cout << "Triangle sides: " << a << ", " << b << ", " << c << endl;
         cout << "Area using Heron's formula: " << calculateArea() << endl;
