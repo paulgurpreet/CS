@@ -178,3 +178,4 @@ int main() {
     return 0;
 }
 ```
+![gg](https://github.com/user-attachments/assets/07bc4980-783c-41a7-ba7c-ec71b2a1986d)
