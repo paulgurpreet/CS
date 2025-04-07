@@ -10,7 +10,7 @@
 
 ![Screenshot from 2025-04-07 14-08-21](https://github.com/user-attachments/assets/197de3d9-335a-41e5-a63e-6a7bf40e5640)
 
-![Screenshot from 2025-04-07 14-08-43](https://github.com/user-attachments/assets/015216ac-1931-407c-a698-238a237f2c91)
+![Screenshot From 2025-04-07 14-32-10](https://github.com/user-attachments/assets/1ead8d7b-e715-4a4b-91c8-81e01dad14d4)
 
 ### Here in the above Image you can see the Wallet Address where we have to enter our metamask wallet address then click on the recive button.
 
