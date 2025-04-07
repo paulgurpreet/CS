@@ -24,7 +24,7 @@ contract Calculator{
 ```
 
 ## 2
-
+```
 contract Twitter{
     // add
     mapping(address => string) public tweets;
@@ -39,9 +39,9 @@ contract Twitter{
     function getTweet(address _owner) public view returns(string memory){
         return tweets[_owner];
     }
-
+```
 ## 3
-
+```
 contract Twitter{
     // add
     mapping(address => string[]) public tweets;
@@ -57,9 +57,9 @@ contract Twitter{
     function getAllTweets(address  _owner) public view returns (string[] memory){
         return tweets[_owner];
     }
-
+```
 ## 4
-
+```
 contract Twitter{
     // define struct
     struct Tweet {
@@ -89,9 +89,9 @@ contract Twitter{
     function getAllTweets(address  _owner) public view returns (Tweet[] memory){
         return tweets[_owner];
     }
-
+```
 ## 5
-
+```
 contract Token {
     address public owner;
     bool  public paused;
@@ -126,3 +126,4 @@ contract Token {
         balance[msg.sender] -= amount;
         balance[to] += amount;
     }
+```
