@@ -1,4 +1,5 @@
 ## 1
+```
 contract Hello {
     string public welecome = "Hello World";
 }
@@ -20,6 +21,7 @@ contract Calculator{
     function get() public view returns (uint256){
         return result; 
     }
+```
 
 ## 2
 
