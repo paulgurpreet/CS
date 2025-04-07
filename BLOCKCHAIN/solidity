@@ -1,0 +1,21 @@
+contract Hello {
+    string public welecome = "Hello World";
+}
+
+contract Calculator{
+    uint256 result = 0 ; 
+    function add(uint128 num1) external {
+        result += num1;
+    }
+
+    function subtract(uint128 num2) public{
+        result -= num2;
+    }
+
+    function multiply(uint128 num3) public{
+        result *= num3;
+    }
+
+    function get() public view returns (uint256){
+        return result; 
+    }
