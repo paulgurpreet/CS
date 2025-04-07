@@ -1,171 +1,157 @@
+// main.cpp
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <ctime>
 #include <cstdlib>
+#include <string>
 #include <cmath>
-#include <sstream>
-#include <iomanip>
-#include <openssl/sha.h> // Requires OpenSSL for SHA-256
+#include <curl/curl.h>
+#include <openssl/evp.h>
 
 using namespace std;
 
-// Utility function: check if number is prime
-bool isPrime(int num) {
-    if (num <= 1) return false;
-    for (int i = 2; i <= sqrt(num); ++i)
-        if (num % i == 0) return false;
-    return true;
-}
-
-// Generate a random prime number in 3-digit range
-int generatePrime() {
-    while (true) {
-        int num = rand() % 1000;
-        if (isPrime(num)) return num;
-    }
-}
-
-int gcd(int a, int b) {
+// -------------------- RSA Utility --------------------
+long long gcd(long long a, long long b) {
     return b == 0 ? a : gcd(b, a % b);
 }
 
-int modInverse(int e, int phi) {
-    for (int d = 2; d < phi; ++d)
-        if ((d * e) % phi == 1)
-            return d;
-    return -1;
-}
-
-// SHA-256 hash function
-string sha256(const string& input) {
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256((const unsigned char*)input.c_str(), input.size(), hash);
-    stringstream ss;
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; ++i)
-        ss << hex << setw(2) << setfill('0') << (int)hash[i];
-    return ss.str();
-}
-
-// Convert string hash to integer for signing
-int hashToInt(const string& hash) {
-    int result = 0;
-    for (int i = 0; i < 5; ++i) {
-        result = (result * 16 + (isdigit(hash[i]) ? hash[i] - '0' : toupper(hash[i]) - 'A' + 10)) % 10000;
+long long modexp(long long base, long long exp, long long mod) {
+    long long result = 1;
+    base %= mod;
+    while (exp > 0) {
+        if (exp & 1)
+            result = (result * base) % mod;
+        base = (base * base) % mod;
+        exp >>= 1;
     }
     return result;
 }
 
-void saveKeys(int e, int d, int n) {
-    ofstream pub("public_key.txt");
-    pub << "Public key -> (e, n)\n";
-    pub << "Public key (e): " << e << "\n";
-    pub << "Modulus (n): " << n << endl;
-    pub.close();
-
-    ofstream priv("private_key.txt");
-    priv << "Private key -> (d, n)\n";
-    priv << "Private key (d): " << d << "\n";
-    priv << "Modulus (n): " << n << endl;
-    priv.close();
+long long modinv(long long a, long long m) {
+    for (long long x = 1; x < m; x++) {
+        if ((a * x) % m == 1)
+            return x;
+    }
+    return -1;
 }
 
-// RSA encryption
-int encrypt(int msg, int e, int n) {
-    long long result = 1;
-    for (int i = 0; i < e; ++i)
-        result = (result * msg) % n;
-    return static_cast<int>(result);
+bool is_prime(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
 }
 
-// RSA decryption
-int decrypt(int cipher, int d, int n) {
-    long long result = 1;
-    for (int i = 0; i < d; ++i)
-        result = (result * cipher) % n;
-    return static_cast<int>(result);
+// -------------------- RSA Key Generation --------------------
+void generate_keys(long long& e, long long& d, long long& n) {
+    int p = 61, q = 53; // Small primes (for demonstration)
+    n = p * q;
+    long long phi = (p - 1) * (q - 1);
+    e = 17; // Choose e
+    d = modinv(e, phi);
+
+    ofstream keyFile("keys.txt");
+    keyFile << "public key -> (" << e << ", " << n << ")\n";
+    keyFile << "private key -> (" << d << ", " << n << ")\n";
+    keyFile.close();
 }
 
-string generateOTP() {
-    int otp = rand() % 1000000; // 6-digit
-    stringstream ss;
-    ss << setw(6) << setfill('0') << otp;
-    return ss.str();
+// -------------------- SHA-P256 Using OpenSSL --------------------
+string sha_p256(const string& input) {
+    unsigned char hash[EVP_MAX_MD_SIZE];
+    unsigned int lengthOfHash = 0;
+
+    EVP_MD_CTX* context = EVP_MD_CTX_new();
+    if (context != nullptr) {
+        if (EVP_DigestInit_ex(context, EVP_sha256(), nullptr)) {
+            if (EVP_DigestUpdate(context, input.c_str(), input.length())) {
+                if (EVP_DigestFinal_ex(context, hash, &lengthOfHash)) {
+                    EVP_MD_CTX_free(context);
+                    char buf[65];
+                    for (unsigned int i = 0; i < lengthOfHash; i++) {
+                        sprintf(buf + (i * 2), "%02x", hash[i]);
+                    }
+                    buf[lengthOfHash * 2] = 0;
+                    return string(buf);
+                }
+            }
+        }
+        EVP_MD_CTX_free(context);
+    }
+    return "";
 }
 
-void sendSMSWithTwilio(const string& otp, const string& phone) {
-    string accountSID = "YOUR_TWILIO_ACCOUNT_SID";
-    string authToken = "YOUR_TWILIO_AUTH_TOKEN";
-    string fromNumber = "YOUR_TWILIO_PHONE_NUMBER";
-    string msg = "Your OTP is: " + otp;
-
-    string command = "curl -X POST https://api.twilio.com/2010-04-01/Accounts/" + accountSID + "/Messages.json "
-                     "--data-urlencode \"To=" + phone + "\" "
-                     "--data-urlencode \"From=" + fromNumber + "\" "
-                     "--data-urlencode \"Body=" + msg + "\" "
-                     "-u " + accountSID + ":" + authToken;
-
-    system(command.c_str());
+// -------------------- RSA Sign --------------------
+long long rsa_sign(const string& message_hash, long long d, long long n) {
+    long long num = stoll(message_hash.substr(0, 5), nullptr, 16);
+    return modexp(num, d, n);
 }
 
-int main() {
+// -------------------- OTP Generation --------------------
+string generate_otp() {
     srand(time(0));
-    string username = "admin", password = "pass123";
-    string u, p;
-    cout << "Username: "; cin >> u;
-    cout << "Password: "; cin >> p;
-    if (u != username || p != password) {
-        cout << "Access Denied.\n";
-        return 0;
+    string otp = "";
+    for (int i = 0; i < 6; i++)
+        otp += to_string(rand() % 10);
+    return otp;
+}
+
+// -------------------- Email via Gmail --------------------
+void send_email(const string& recipient, const string& otp) {
+    CURL* curl = curl_easy_init();
+    if (curl) {
+        string username = "your_email@gmail.com";
+        string password = "your_app_password"; // App password from Google
+
+        string message = "To: " + recipient + "\r\n"
+                         "From: " + username + "\r\n"
+                         "Subject: Your OTP\r\n"
+                         "\r\n"
+                         "Your OTP is: " + otp + "\r\n";
+
+        curl_easy_setopt(curl, CURLOPT_USERNAME, username.c_str());
+        curl_easy_setopt(curl, CURLOPT_PASSWORD, password.c_str());
+        curl_easy_setopt(curl, CURLOPT_URL, "smtps://smtp.gmail.com:465");
+        curl_easy_setopt(curl, CURLOPT_MAIL_FROM, ("<" + username + ">" ).c_str());
+
+        struct curl_slist* recipients = NULL;
+        recipients = curl_slist_append(recipients, ("<" + recipient + ">" ).c_str());
+        curl_easy_setopt(curl, CURLOPT_MAIL_RCPT, recipients);
+
+        curl_easy_setopt(curl, CURLOPT_READFUNCTION, [](char* ptr, size_t size, size_t nmemb, void* userdata) -> size_t {
+            string* msg = static_cast<string*>(userdata);
+            size_t len = msg->size();
+            memcpy(ptr, msg->c_str(), len);
+            msg->clear(); return len;
+        });
+        curl_easy_setopt(curl, CURLOPT_READDATA, &message);
+        curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);
+        curl_easy_perform(curl);
+        curl_slist_free_all(recipients);
+        curl_easy_cleanup(curl);
     }
+}
 
-    // RSA Key Generation
-    int p1 = generatePrime(), p2 = generatePrime();
-    int n = p1 * p2;
-    int phi = (p1 - 1) * (p2 - 1);
-    int e = 3;
-    while (gcd(e, phi) != 1) ++e;
-    int d = modInverse(e, phi);
+// -------------------- MAIN --------------------
+int main() {
+    long long e, d, n;
+    generate_keys(e, d, n);
 
-    saveKeys(e, d, n);
+    string otp = generate_otp();
+    string hashed = sha_p256(otp);
+    long long signature = rsa_sign(hashed, d, n);
 
-    string otp = generateOTP();
-    time_t generatedTime = time(0);
+    ofstream sigFile("signature.txt");
+    sigFile << "OTP: " << otp << "\n";
+    sigFile << "SHA-P256 hash: " << hashed << "\n";
+    sigFile << "Digital Signature: " << signature << "\n";
+    sigFile << "Generated at: " << time(0) << " (valid for 180 seconds)\n";
+    sigFile.close();
 
-    // Hash and Sign
-    string hashedOTP = sha256(otp);
-    int otpHashInt = hashToInt(hashedOTP);
-    int signature = encrypt(otpHashInt, d, n);
+    string recipient_email = "recipient@example.com"; // <-- change this
+    send_email(recipient_email, otp);
 
-    // Send via Twilio SMS
-    string phone;
-    cout << "Enter phone number (+CountryCode...): ";
-    cin >> phone;
-    sendSMSWithTwilio(otp, phone);
-
-    cout << "\nOTP has been sent.\n";
-    cout << "Digital Signature (RSA Encrypted Hash): " << signature << endl;
-
-    // OTP Verification
-    string enteredOTP;
-    cout << "\nEnter received OTP: ";
-    cin >> enteredOTP;
-
-    time_t now = time(0);
-    if (difftime(now, generatedTime) > 180) {
-        cout << "OTP expired.\n";
-        return 0;
-    }
-
-    string enteredHash = sha256(enteredOTP);
-    int enteredHashInt = hashToInt(enteredHash);
-    int decryptedSignature = decrypt(signature, e, n);
-
-    if (enteredHashInt == decryptedSignature) {
-        cout << "\nOTP Verified Successfully. Access Granted.\n";
-    } else {
-        cout << "\nInvalid OTP.\n";
-    }
-
+    cout << "OTP sent and digitally signed. Check your email." << endl;
     return 0;
 }
