@@ -342,11 +342,9 @@ contract StudentRecords {
     }
 }
 ```
+![sec2](https://github.com/user-attachments/assets/94bbe6fe-c11d-42fa-b0f2-f4f543d3f8c3)
+![sec2-1](https://github.com/user-attachments/assets/98619b98-8a15-4156-95e8-93c6534ad6f4)
 
-![sec2](https://github.com/user-attachments/assets/7d6b10d2-ab35-4fd4-8c28-dce8520c1c54)![sec3](https://github.com/user-attachments/assets/bf9603ba-3e84-435b-b877-d62dd7bd5f7e)![sec4]
-
-
-![sec1](https://github.com/user-attachments/assets/5b4d019e-bb1f-41c8-a81e-1e92940830e4)
 
 
 
