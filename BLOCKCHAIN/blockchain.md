@@ -168,6 +168,17 @@ to add video
 
 ![video](https://github.com/user-attachments/assets/131c2e88-a2fa-47a1-93f3-22d615d2e1bd)
 
+## Deploying contracts using remix ide
+![sec2](https://github.com/user-attachments/assets/7d6b10d2-ab35-4fd4-8c28-dce8520c1c54)![sec3](https://github.com/user-attachments/assets/bf9603ba-3e84-435b-b877-d62dd7bd5f7e)![sec4]
+
+
+![sec1](https://github.com/user-attachments/assets/5b4d019e-bb1f-41c8-a81e-1e92940830e4)
+
+
+
+
+
+
 
 
 
