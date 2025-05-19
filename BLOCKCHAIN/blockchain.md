@@ -317,6 +317,32 @@ contract Token {
 
 
 ## Deploying contracts using remix ide
+### 2
+Write a contract that manages a list of student records (name, roll number). Allow adding and retrieving student data.
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract StudentRecords {
+    struct Student {
+        string name;
+        uint rollNo;
+    }
+
+    Student[] public students;
+
+    function addStudent(string memory _name, uint _rollNo) public {
+        students.push(Student(_name, _rollNo));
+    }
+
+    function getStudent(uint index) public view returns (string memory, uint) {
+        require(index < students.length, "Invalid index");
+        Student memory s = students[index];
+        return (s.name, s.rollNo);
+    }
+}
+```
+
 ![sec2](https://github.com/user-attachments/assets/7d6b10d2-ab35-4fd4-8c28-dce8520c1c54)![sec3](https://github.com/user-attachments/assets/bf9603ba-3e84-435b-b877-d62dd7bd5f7e)![sec4]
 
 
