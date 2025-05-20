@@ -176,7 +176,7 @@ def generate_permutations(Set, repetition):
     else:
         return list(permutations(Set))  # Correct for no repetition
 
-if __name__ == "__main__":  # ✅ Fix typo: it should be "__main__", not "___main__"
+if __name__ == "__main__":  
     Set = list(map(int, input("Enter all elements of the set with space: ").split()))  # list instead of set to preserve order and duplicates
 
     with_repetition = generate_permutations(Set, repetition=True)
