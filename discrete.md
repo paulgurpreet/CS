@@ -168,33 +168,35 @@ print("Your Relation is", R.check_relation_type())
 ## practical 3
 Write a Program that generates all the permutations of a given set of digits, with or  without repetition
 ```
-def permute_no_repetition(prefix, digits, used):
-    if len(prefix) == len(digits):
-        print(' '.join(prefix))
-        return
-    for i in range(len(digits)):
-        if not used[i]:
-            used[i] = True
-            permute_no_repetition(prefix + [digits[i]], digits, used)
-            used[i] = False
+from itertools import permutations, product
 
-def permute_with_repetition(prefix, digits, length):
-    if len(prefix) == length:
-        print(' '.join(prefix))
-        return
-    for d in digits:
-        permute_with_repetition(prefix + [d], digits, length)
+def generate_permutations(Set, repetition): 
+    if repetition:
+        return list(product(Set, repeat=len(Set)))  # Correct for repetition
+    else:
+        return list(permutations(Set))  # Correct for no repetition
 
-digits = input("Enter digits separated by spaces: ").split()
+if __name__ == "__main__":  # ✅ Fix typo: it should be "__main__", not "___main__"
+    Set = list(map(int, input("Enter all elements of the set with space: ").split()))  # list instead of set to preserve order and duplicates
 
-print("\nPermutations Without Repetition:")
-used = [False] * len(digits)
-permute_no_repetition([], digits, used)
+    with_repetition = generate_permutations(Set, repetition=True)
+    without_repetition = generate_permutations(Set, repetition=False)
 
-print("\nPermutations With Repetition:")
-permute_with_repetition([], digits, len(digits))
+    print("\nPermutations with repetition:")
+    for perm in with_repetition:
+        print(perm)
+
+    print("\nPermutations without repetition:")
+    for perm in without_repetition:
+        print(perm)
+
+    print("\nCount:")
+    print("Without repetition:", len(without_repetition))
+    print("With repetition:", len(with_repetition))
+
 ```
-![d3](https://github.com/user-attachments/assets/1e8ffbaf-0c8e-4e45-91d0-52540d43e220)
+![d3](https://github.com/user-attachments/assets/2018165a-27b7-4dd7-924e-2a7b45921515)
+
 
 ## practical 4
  For any number n, write a program to list all the solutions of the equation x1 + x2 +
