@@ -226,6 +226,111 @@ for sol in all_solutions:
     print(sol)
 ```
 ![d4](https://github.com/user-attachments/assets/29dfac28-f664-4059-b4fb-9fb357a0ea76)
+## practical 5
+Write a Program to evaluate a polynomial function. (For example store f(x) = 4n2 +
+ 2n + 9 in an array and for a given value of n, say n = 5, compute the value of f(n)).
+ ```
+def solve_polynomial():
+    func = list(map(int, input("Enter Your Function coefficient Separated With Space::").split()))
+    num = int(input("Enter Value Of Your Variable::"))
+    value = 0
+    for i in range(-1, -len(func)-1, -1):
+        value += func[i] * num ** (-i - 1)
+    return value
+
+print(solve_polynomial())
+```
+![d5](https://github.com/user-attachments/assets/a2c06492-7169-4eab-9c58-b649b6f05360)
+## practical 6
+ Write a Program to check if a given graph is a complete graph. Represent the graph
+ using the Adjacency Matrix representation.
+ ```
+def is_complete_graph(adj_matrix):
+    n = len(adj_matrix)
+    for i in range(n):
+        for j in range(n):
+            if i == j and adj_matrix[i][j] != 0:
+                return False  # self-loop
+            elif i != j and adj_matrix[i][j] != 1:
+                return False  
+    return True
+
+n = int(input("Enter number of vertices: "))
+
+print("Enter the adjacency matrix row by row:")
+adj_matrix = []
+for i in range(n):
+    row = list(map(int, input().split()))
+    adj_matrix.append(row)
+print('adjacency matrix is:',adj_matrix)
+
+if is_complete_graph(adj_matrix):
+    print("The graph is a complete graph.")
+else:
+    print("The graph is NOT a complete graph.")
+```
+![d6](https://github.com/user-attachments/assets/826cb444-187d-46fe-aa8b-300d59a9a826)
+
+## practical 7
+ Write a Program to check if a given graph is a complete graph. Represent the graph
+ using the Adjacency List representation.
+ ```
+def is_complete_graph(adj_list, n):
+    for i in range(n):
+        if i in adj_list[i]:  
+            return False
+        if len(adj_list[i]) != n - 1:
+            return False
+    return True
+
+n = int(input("Enter number of vertices: "))
+adj_list = {}
+
+print("Enter the adjacent vertices for each vertex (space-separated):")
+for i in range(n):
+    neighbors = list(map(int, input().split()))
+    adj_list[i] = neighbors
+
+print("\nAdjacency List:")
+for i in range(n):
+    print(adj_list[i])
+
+if is_complete_graph(adj_list, n):
+    print("\nThe graph is a COMPLETE graph.")
+else:
+    print("\nThe graph is NOT a complete graph.")
+```
+![d7](https://github.com/user-attachments/assets/6477c725-a41e-478b-95b9-c1e7755336c0)
+## practical 8
+ Write a Program to accept a directed graph G and compute the in-degree and out
+degree of each vertex.
+```
+n = int(input("Enter number of vertices: "))
+
+adj_list = {}
+print("Enter the adjacent vertices for each vertex (space-separated):")
+for i in range(n):
+    neighbors = list(map(int, input().split()))
+    adj_list[i] = neighbors
+
+in_degree = {i: 0 for i in range(n)}
+out_degree = {i: 0 for i in range(n)}
+
+for i in range(n):
+    out_degree[i] = len(adj_list[i])
+
+for i in range(n):
+    for neighbor in adj_list[i]:
+        in_degree[neighbor] += 1
+
+print("\nVertex\tIn-degree\tOut-degree")
+for i in range(n):
+    print(f"{i}\t{in_degree[i]}\t\t{out_degree[i]}")
+```
+![d8](https://github.com/user-attachments/assets/82051fc2-6266-4c27-b13d-9c3bcc6b8fa4)
+
+
+
 
 
 
