@@ -99,69 +99,75 @@ Create a class RELATION, use Matrix notation to represent a relation. Include
  Partial Order relation or None
  ```
 class RELATION:
-    def __init__(self, n, flat_values):
-        self.n = n
-        self.matrix = []
-        idx = 0
-        for _ in range(n):
-            row = []
-            for _ in range(n):
-                row.append(flat_values[idx])
-                idx += 1
-            self.matrix.append(row)
+    def __init__(self, matrix):
+        self.matrix = matrix
+        self.length = len(matrix)
 
-    def is_reflexive(self):
-        for i in range(self.n):
-            if self.matrix[i][i] != 1:
+    def reflexive(self):
+        for i in range(self.length):
+            if not self.matrix[i][i]:
                 return False
         return True
 
-    def is_symmetric(self):
-        for i in range(self.n):
-            for j in range(self.n):
+    def symmetric(self):
+        for i in range(self.length):
+            for j in range(self.length):
                 if self.matrix[i][j] != self.matrix[j][i]:
                     return False
         return True
 
-    def is_anti_symmetric(self):
-        for i in range(self.n):
-            for j in range(self.n):
-                if i != j and self.matrix[i][j] == 1 and self.matrix[j][i] == 1:
+    def anti_symmetric(self):
+        for i in range(self.length):
+            for j in range(self.length):
+                if i != j and self.matrix[i][j] and self.matrix[j][i]:
                     return False
         return True
 
-    def is_transitive(self):
-        for i in range(self.n):
-            for j in range(self.n):
+    def transitive(self):
+        for i in range(self.length):
+            for j in range(self.length):
                 if self.matrix[i][j]:
-                    for k in range(self.n):
+                    for k in range(self.length):
                         if self.matrix[j][k] and not self.matrix[i][k]:
                             return False
         return True
 
-    def check_relation_type(self):
-        r = self.is_reflexive()
-        s = self.is_symmetric()
-        a = self.is_anti_symmetric()
-        t = self.is_transitive()
-        if r and s and t:
-            return "Equivalence Relation."
-        elif r and a and t:
-            return "Partial Order Relation."
+    def relation_type(self):
+        is_reflexive = self.reflexive()
+        is_symmetric = self.symmetric()
+        is_anti_symmetric = self.anti_symmetric()
+        is_transitive = self.transitive()
+
+        if is_reflexive and is_symmetric and is_transitive:
+            return "Equivalence Relation"
+        elif is_reflexive and is_anti_symmetric and is_transitive:
+            return "Partial Order Relation"
         else:
             return "None"
+def get_matrix():
+    n = int(input("Enter number of elements (n x n matrix): "))
+    matrix = []
+    print("Enter the matrix row by row (use 0 or 1):")
+    for i in range(n):
+        row = list(map(int, input(f"Row {i+1}: ").strip().split()))
+        if len(row) != n:
+            raise ValueError("Each row must have exactly", n, "elements.")
+        matrix.append(row)
+    return matrix
+
+# Get matrix from user
+
+user_matrix = get_matrix()
+relation = RELATION(user_matrix)
+
+print("\n--- Properties ---")
+print("Reflexive:", relation.reflexive())
+print("Symmetric:", relation.symmetric())
+print("Anti-Symmetric:", relation.anti_symmetric())
+print("Transitive:", relation.transitive())
+print("\nRelation Type:", relation.relation_type())
 
 
-flat = list(map(int, input("Enter All Relation In Form Of Matrix Value With A Space:: ").split()))
-n = int(input("Enter How Many Row or Columns In Your Square Matrix:: "))
-
-R = RELATION(n, flat)
-
-print("Your Required Matrix Are::")
-for row in R.matrix:
-    print(row)
-
-print("Your Relation is", R.check_relation_type())
 ```
 ![d2](https://github.com/user-attachments/assets/71146834-2d95-473e-9e7c-27f53fbb151c)
 
