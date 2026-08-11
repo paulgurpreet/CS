@@ -242,3 +242,13 @@ plt.grid(True)
 plt.show()
 
 ```
+## OUTPUT -
+<img width="1100" height="578" alt="1" src="https://github.com/user-attachments/assets/6eeab948-e7ca-4e46-8a04-df71d4b32b34" />
+
+<img width="520" height="481" alt="2" src="https://github.com/user-attachments/assets/ddad76f8-df87-4b09-abed-e82569399fe3" />
+
+<img width="1194" height="656" alt="3" src="https://github.com/user-attachments/assets/8c9e836f-834b-42a5-9b97-7efc6c1da022" />
+
+
+
+
