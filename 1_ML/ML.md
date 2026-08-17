@@ -278,7 +278,7 @@ plt.grid(True)
 plt.show()
 ```
 ## OUTPUT - 
-<img width="553" height="633" alt="2_2" src="https://github.com/user-attachments/assets/4a879ee4-be61-4284-b541-ca2c73f6d886" />
 <img width="794" height="569" alt="1_2" src="https://github.com/user-attachments/assets/e4baa04d-47f6-408b-bfd2-b7b664ac956b" />
+<img width="553" height="633" alt="2_2" src="https://github.com/user-attachments/assets/4a879ee4-be61-4284-b541-ca2c73f6d886" />
 <img width="1685" height="876" alt="3_2" src="https://github.com/user-attachments/assets/d6cd480e-3586-4469-ac82-b88b6ffb0679" />
 
