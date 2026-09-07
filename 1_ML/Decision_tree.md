@@ -96,6 +96,6 @@ plt.show()
 
 
 ```
-<img width="1400" height="800" alt="647446287-e51a926c-e90c-4306-aabf-87dae1eecb61" src="https://github.com/user-attachments/assets/aaab10fb-f39d-4f11-918e-67400d394686" />
 <img width="1074" height="397" alt="111111112" src="https://github.com/user-attachments/assets/8f676c4d-61d6-4d0f-a653-7858dbeaf48c" />
+<img width="1400" height="800" alt="647446287-e51a926c-e90c-4306-aabf-87dae1eecb61" src="https://github.com/user-attachments/assets/aaab10fb-f39d-4f11-918e-67400d394686" />
 
