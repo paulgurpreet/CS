@@ -1,109 +1,101 @@
 ```
-# Import required libraries
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import load_iris
+from sklearn.preprocessing import LabelEncoder
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.tree import plot_tree
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
+# Create dataset
+data = {
+    'Outlook': [
+        'Sunny', 'Sunny', 'Overcast', 'Rain',
+        'Rain', 'Rain', 'Overcast', 'Sunny',
+        'Sunny', 'Rain', 'Sunny', 'Overcast',
+        'Overcast', 'Rain'
+    ],
 
-# Load Iris dataset
+    'Temperature': [
+        'Hot', 'Hot', 'Hot', 'Mild',
+        'Cool', 'Cool', 'Cool', 'Mild',
+        'Cool', 'Mild', 'Mild', 'Mild',
+        'Hot', 'Mild'
+    ],
 
-iris = load_iris()
+    'Humidity': [
+        'High', 'High', 'High', 'High',
+        'Normal', 'Normal', 'Normal', 'High',
+        'Normal', 'Normal', 'Normal', 'High',
+        'Normal', 'High'
+    ],
 
-X = iris.data
-y = iris.target
+    'Wind': [
+        'Weak', 'Strong', 'Weak', 'Weak',
+        'Weak', 'Strong', 'Strong', 'Weak',
+        'Weak', 'Weak', 'Strong', 'Strong',
+        'Weak', 'Strong'
+    ],
 
+    'PlayTennis': [
+        'No', 'No', 'Yes', 'Yes',
+        'Yes', 'No', 'Yes', 'No',
+        'Yes', 'Yes', 'Yes', 'Yes',
+        'Yes', 'No'
+    ]
+}
 
-# Display feature names and target names
+df = pd.DataFrame(data)
 
-print("Features:")
-print(iris.feature_names)
+print("Dataset:")
+print(df)
 
-print("\nTarget Classes:")
-print(iris.target_names)
+# Encode categorical values
+le = LabelEncoder()
 
+for column in df.columns:
+    df[column] = le.fit_transform(df[column])
 
-# Split dataset into training and testing data
+# Separate features and target
+X = df.drop('PlayTennis', axis=1)
+y = df['PlayTennis']
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42
-)
-
-
-# Create Decision Tree model
-
+# Create Decision Tree
 model = DecisionTreeClassifier(
-    criterion="entropy",
+    criterion='entropy',
     random_state=42
 )
 
+# Train model
+model.fit(X, y)
 
-# Train the model
+# Predictions
+y_pred = model.predict(X)
 
-model.fit(X_train, y_train)
-
-
-# Make predictions
-
-y_pred = model.predict(X_test)
-
-
-# Calculate accuracy
-
-accuracy = accuracy_score(y_test, y_pred)
+# Accuracy
+accuracy = accuracy_score(y, y_pred)
 
 print("\nAccuracy:", accuracy)
 
-
 # Confusion Matrix
-
 print("\nConfusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
+print(confusion_matrix(y, y_pred))
 
-
-# Classification Report
-
-print("\nClassification Report:")
-print(classification_report(
-    y_test,
-    y_pred,
-    target_names=iris.target_names
-))
-
-
-# Visualize the Decision Tree
-
-plt.figure(figsize=(15, 10))
+# Decision Tree
+plt.figure(figsize=(14, 8))
 
 plot_tree(
     model,
-    feature_names=iris.feature_names,
-    class_names=iris.target_names,
+    feature_names=X.columns,
+    class_names=['No', 'Yes'],
     filled=True
 )
 
-plt.title("Decision Tree Classifier")
+plt.title("Decision Tree - Play Tennis")
 plt.show()
 
 
-# Test a new flower
-
-new_flower = [[5.1, 3.5, 1.4, 0.2]]
-
-prediction = model.predict(new_flower)
-
-print("\nPredicted Class:",
-      iris.target_names[prediction[0]])
-
 ```
-<img width="647" height="403" alt="image" src="https://github.com/user-attachments/assets/a7bbae68-1275-4a48-93bc-c8c1a78e6e2c" />
+<img width="1400" height="800" alt="647446287-e51a926c-e90c-4306-aabf-87dae1eecb61" src="https://github.com/user-attachments/assets/aaab10fb-f39d-4f11-918e-67400d394686" />
+<img width="1074" height="397" alt="111111112" src="https://github.com/user-attachments/assets/8f676c4d-61d6-4d0f-a653-7858dbeaf48c" />
 
-<img width="1358" height="848" alt="image" src="https://github.com/user-attachments/assets/2090a5b9-2e47-43c8-a600-31c3d62e042b" />
