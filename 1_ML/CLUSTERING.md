@@ -1,4 +1,4 @@
-# Practical 4: Hierarchical Clustering
+# Hierarchical Clustering
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
