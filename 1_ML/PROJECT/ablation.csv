@@ -1,0 +1,10 @@
+feature_set,f1,auc,cv_f1,cv_auc
+All four features,0.8105,0.8171,0.8921,0.8924
+Without City,0.8238,0.8124,0.8921,0.8968
+Without Investment type,0.847,0.586,0.3432,0.5637
+Without Sector,0.6286,0.8302,0.8921,0.8882
+Without Year,0.6318,0.8139,0.8921,0.8955
+Only City,0.6121,0.5396,0.3272,0.5543
+Only Investment type,0.6286,0.8073,0.8921,0.893
+Only Sector,0.6349,0.5406,0.4436,0.5773
+Only Year,0.8436,0.5981,0.2474,0.488
