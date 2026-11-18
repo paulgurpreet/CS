@@ -45,4 +45,4 @@ The k-NN result can differ slightly between library versions (the tuned k was 31
 Data: [Indian Startup Funding](https://www.kaggle.com/datasets/sudalairajkumar/indian-startup-funding), Kaggle, CC0.
 
 ## Use of AI tools
-[Author: write here accurately which AI tools were used and for what, and what you checked yourself.]
+The code and report draft are written with help of AI assistant(Claude) and I ran the code myself and reviewed the results before submitting.
