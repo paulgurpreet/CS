@@ -1,4 +1,4 @@
-```
+
 #!/usr/bin/env python3
 """
 run_experiments.py -- What predicts large funding rounds for Indian start-ups?
@@ -468,4 +468,3 @@ print(json.dumps({k: R[k] for k in ["n_raw", "n_model", "n_train", "n_test", "me
 for n, r in results.items():
     print(f"{n:26s} acc={r['acc']:.3f} prec={r['prec']:.3f} rec={r['rec']:.3f} f1={r['f1']:.3f} auc={r['auc']:.3f} cvF1={r['cv_f1']:.3f}  {r['best']}")
 print("sil", {k: round(v, 3) for k, v in sil.items()})
-```
