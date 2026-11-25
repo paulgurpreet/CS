@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Register - Campus Lost & Found</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div id="navbar" class="navbar"></div>
+
+<div class="container" style="max-width:480px;">
+  <h1 class="page-title">Create an account</h1>
+  <p class="page-subtitle">Use your college email so reports can be traced back to you.</p>
+
+  <div class="card">
+    <div id="alertBox"></div>
+    <label for="name">Full name</label>
+    <input id="name" placeholder="Your name" required />
+
+    <label for="email">College email</label>
+    <input id="email" type="email" placeholder="you@college.edu" />
+
+    <label for="role">I am a</label>
+    <select id="role">
+      <option value="student">Student</option>
+      <option value="staff">Staff</option>
+    </select>
+
+    <label for="contact_no">Contact number</label>
+    <input id="contact_no" placeholder="10-digit number" />
+
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Choose a password" />
+
+    <button class="btn" id="registerBtn">Register</button>
+  </div>
+  <p>Already have an account? <a href="/login.html">Login here</a></p>
+</div>
+
+<script src="/js/common.js"></script>
+<script>
+document.getElementById("registerBtn").addEventListener("click", async () => {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const role = document.getElementById("role").value;
+  const contact_no = document.getElementById("contact_no").value.trim();
+  const password = document.getElementById("password").value;
+
+  const alertBox = document.getElementById("alertBox");
+  if (!name || !email || !password) {
+    alertBox.innerHTML = `<div class="alert error">Name, email and password are required.</div>`;
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alertBox.innerHTML = `<div class="alert error">Please enter a valid email address.</div>`;
+    return;
+  }
+  if (password.length < 6) {
+    alertBox.innerHTML = `<div class="alert error">Password must be at least 6 characters.</div>`;
+    return;
+  }
+  if (contact_no && !/^\d{10}$/.test(contact_no)) {
+    alertBox.innerHTML = `<div class="alert error">Contact number must be exactly 10 digits.</div>`;
+    return;
+  }
+
+  try {
+    await api("/auth/register", { method: "POST", body: JSON.stringify({ name, email, role, contact_no, password }) });
+    window.location.href = "/index.html";
+  } catch (e) {
+    document.getElementById("alertBox").innerHTML = `<div class="alert error">${escapeHtml(e.message)}</div>`;
+  }
+});
+</script>
+</body>
+</html>

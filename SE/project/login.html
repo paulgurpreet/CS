@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login - Campus Lost & Found</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div id="navbar" class="navbar"></div>
+
+<div class="container" style="max-width:420px;">
+  <h1 class="page-title">Login</h1>
+  <p class="page-subtitle">Welcome back.</p>
+
+  <div class="card">
+    <div id="alertBox"></div>
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="you@college.edu" />
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Your password" />
+    <button class="btn" id="loginBtn">Login</button>
+  </div>
+  <p>New here? <a href="/register.html">Create an account</a></p>
+  <p class="footer-note">Admin demo login: admin@campus.edu / admin123</p>
+</div>
+
+<script src="/js/common.js"></script>
+<script>
+document.getElementById("loginBtn").addEventListener("click", async () => {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  try {
+    const user = await api("/auth/login", { method: "POST", body: JSON.stringify({ email, password }) });
+    window.location.href = user.role === "admin" ? "/admin.html" : "/index.html";
+  } catch (e) {
+    document.getElementById("alertBox").innerHTML = `<div class="alert error">${escapeHtml(e.message)}</div>`;
+  }
+});
+document.getElementById("password").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") document.getElementById("loginBtn").click();
+});
+</script>
+</body>
+</html>
