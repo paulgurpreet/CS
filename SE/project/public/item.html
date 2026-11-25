@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Item Details - Campus Lost & Found</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div id="navbar" class="navbar"></div>
+
+<div class="container" style="max-width:700px;">
+  <a href="/index.html">&larr; Back to browse</a>
+  <div id="content"></div>
+</div>
+
+<script src="/js/common.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const itemId = params.get("id");
+
+async function load() {
+  await renderNavbar();
+  const box = document.getElementById("content");
+
+  let item;
+  try {
+    item = await api("/items/" + itemId);
+  } catch (e) {
+    box.innerHTML = `<div class="alert error" style="margin-top:1rem;">${escapeHtml(e.message || "Item not found.")}</div>`;
+    return;
+  }
+
+  const isOwnItem = CURRENT_USER && CURRENT_USER.user_id === item.user_id;
+  const alreadyClaimed = item.status === "Claimed";
+
+  let claimSection = "";
+  if (!isOwnItem && !alreadyClaimed) {
+    const heading = item.type === "found" ? "Is this yours?" : "Did you find this item?";
+    const helpText = item.type === "found"
+      ? "Raise a claim and an admin will verify it before handing the item over."
+      : "Let the owner know you found it. An admin will verify your claim before the item is marked returned.";
+    const buttonText = item.type === "found" ? "Raise Claim - This is Mine" : "Raise Claim - I Found This";
+    claimSection = `
+      <div class="card">
+        <h3 style="margin-top:0;">${heading}</h3>
+        <p class="meta">${helpText}</p>
+        <div id="claimAlert"></div>
+        <label for="msg">Message to admin ${item.type === "found" ? "(describe why it's yours)" : "(where/how you found it)"}</label>
+        <textarea id="msg" placeholder="Add a few identifying details..."></textarea>
+        <button class="btn" id="claimBtn">${buttonText}</button>
+      </div>
+    `;
+  } else if (isOwnItem) {
+    claimSection = `<div class="card"><p class="meta">This is your own listing - manage its status from "My Items".</p></div>`;
+  } else if (alreadyClaimed) {
+    claimSection = `<div class="card"><p class="meta">This item has already been resolved and claimed.</p></div>`;
+  }
+
+  box.innerHTML = `
+    <div class="card" style="margin-top:1rem;">
+      <h2 style="color:var(--purple-dark); margin-top:0;">${escapeHtml(item.title)} ${badgeForType(item.type)} ${badgeForStatus(item.status)}</h2>
+      <table>
+        <tr><th>Category</th><td>${escapeHtml(item.category)}</td></tr>
+        <tr><th>Location</th><td>${escapeHtml(item.location || "-")}</td></tr>
+        <tr><th>Date</th><td>${escapeHtml(item.date_reported)}</td></tr>
+        <tr><th>Description</th><td>${escapeHtml(item.description || "-")}</td></tr>
+        <tr><th>Reported by</th><td>${escapeHtml(item.reporter_name)}</td></tr>
+      </table>
+    </div>
+    ${claimSection}
+  `;
+
+  const claimBtn = document.getElementById("claimBtn");
+  if (claimBtn) {
+    claimBtn.addEventListener("click", async () => {
+      if (!requireLoginOrRedirect()) return;
+      claimBtn.disabled = true;
+      try {
+        await api("/claims", {
+          method: "POST",
+          body: JSON.stringify({ item_id: item.item_id, message: document.getElementById("msg").value }),
+        });
+        document.getElementById("claimAlert").innerHTML =
+          `<div class="alert success">Claim submitted! Track its status under "My Items".</div>`;
+        claimBtn.textContent = "Claim Submitted";
+      } catch (e) {
+        document.getElementById("claimAlert").innerHTML = `<div class="alert error">${escapeHtml(e.message)}</div>`;
+        claimBtn.disabled = false;
+      }
+    });
+  }
+}
+
+load();
+</script>
+</body>
+</html>
