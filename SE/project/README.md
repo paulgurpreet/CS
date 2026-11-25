@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/35426436/README.md)
+
 # Campus Lost & Found Management System
 
 A full working web app for reporting, searching, and claiming lost/found items
