@@ -101,12 +101,3 @@ lost-found-app/
   won't exist yet. Reinstall Node.js using the latest LTS installer from
   nodejs.org.
 
-## Notes for your viva / demo
-
-- Try reporting a **found** item, then a **lost** item in the *same category*
-  with an overlapping word in the description (e.g. both mention "black") -
-  the system will auto-mark both as "Matched" and notify both users. That's
-  the FR4 matching logic in action.
-- Log in as admin to see the claim approval flow (FR6) - approving a claim
-  automatically marks the item "Claimed" and rejects any other pending
-  claims on the same item.
